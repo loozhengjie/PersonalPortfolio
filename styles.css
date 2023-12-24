@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+body{
+  background-color: black;
+}
+
+
+.logo{
+  display: flex;
+  float: left;
+}
+
+.logo.one{
+  width: 50px;
+  height: 60px;
+  margin: 4px -8px 0 15px;
+  transform: scale(0.7);
+}
+
+.logo-semi-colon{
+  color: rgb(243, 87, 87);
+}
+
+.logo-dash{
+  padding: 0 3px 0 3px;
+  color: rgb(87, 243, 243);
+}
+
+.logo.two{
+  font-size: 1rem;
+  padding: 22px 0 0 5px;
+  text-transform: uppercase;
+  font-family: 'Fira Code', monospace, Arial;
+  font-weight: bold;
+}
+
+.logo.three{
+  font-size: 1.5rem;
+  padding: 17px 0 0 1px;
+  animation-name: typing-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.navbar li{
+  margin: 5px;
+  padding: 16px 10px 0 5px;
+  font-family: 'Fira Code', monospace, Arial;
+  font-size: 1.1rem;
+}
+
+.navbar li a:hover{
+  color: rgb(29, 183, 255);
+  font-size: 1.2rem;
+}
+
+.navbar li .select{
+  color: orange;
+  font-size: 1.2rem;
+}
+
+.navbar li .select .highlight{
+  display: inline;
+}
+
+.dot-divider{
+  font-size: 1.3rem;
+  padding-top: 18px;
+}
+
+.highlight{
+  display: none;
+}
+
+.navbar li a:hover .highlight{
+  display: inline;
+}
+
+.navbar li:last-child{
+  margin-right: 15px;
+}
+
+#check{
+  display: none;
+}
+
+.menubtn{
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  display: none;
+}
+
+@media screen and (max-width: 790px) {
+  .navbar li, .navbar .dot-divider{
+    display: none;
+  }
+
+  .menubtn{
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: inline;
+  }
+}
+
+@keyframes typing-animation {
+  0% {
+    opacity: 1;
+  }
+  25% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+}
+}
+
