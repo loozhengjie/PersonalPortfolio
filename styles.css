@@ -7,9 +7,43 @@
   color: white;
 }
 
+:root{
+  --programming-font:'Fira Code', monospace, Arial;
+}
+
 body{
   background-color: black;
 }
+
+
+#video-background{
+  position:fixed;
+  z-index: -1;
+  width: 50%;
+  right: 0;
+  left: 40%;
+  height: auto;
+  text-align: center;
+}
+
+.pic-ref{
+  position: absolute;
+  bottom: 0;
+  color: rgba(128, 128, 128, 0.753);
+  float: left;
+  font-family: var(--programming-font);
+  font-size: 0.7rem;
+  padding: 0 0 5px 15px;
+}
+
+.pic-ref a:first-child{
+  color: rgb(243, 192, 232, 0.753);
+}
+
+.pic-ref a:last-child{
+  color: rgba(101, 202, 241, 0.753);
+}
+
 
 
 .logo{
@@ -37,13 +71,16 @@ body{
   font-size: 1rem;
   padding: 22px 0 0 5px;
   text-transform: uppercase;
-  font-family: 'Fira Code', monospace, Arial;
+  font-family: var(--programming-font);
   font-weight: bold;
 }
 
 .logo.three{
   font-size: 1.5rem;
   padding: 17px 0 0 1px;
+}
+
+.typing{
   animation-name: typing-animation;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -58,7 +95,7 @@ body{
 .navbar li{
   margin: 5px;
   padding: 16px 10px 0 5px;
-  font-family: 'Fira Code', monospace, Arial;
+  font-family: var(--programming-font);
   font-size: 1.1rem;
 }
 
@@ -104,6 +141,24 @@ body{
   display: none;
 }
 
+.welcome-page{
+  position: relative;
+}
+
+.welcome-page p{
+  font-size: 5rem;
+  font-family: (--programming-font);
+  font-weight: bold;
+  color: rgba(199, 199, 199, 0.568);
+  position: absolute;
+  bottom: 0;
+  top: 200px;
+  left: 150px;
+  display: inline;
+  width: 40%;
+}
+
+
 @media screen and (max-width: 790px) {
   .navbar li, .navbar .dot-divider{
     display: none;
@@ -114,6 +169,11 @@ body{
     font-size: 20px;
     padding: 15px;
     display: inline;
+  }
+
+  #video-background{
+    width: 100%;
+    left: 10%;
   }
 }
 
