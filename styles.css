@@ -15,38 +15,9 @@ body{
   background-color: black;
 }
 
-
-#video-background{
-  position:fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 40%;
-  height: auto;
-  text-align: center;
+header{
+  height: 70px;
 }
-
-
-
-.pic-ref{
-  position: absolute;
-  bottom: 0;
-  color: rgba(128, 128, 128, 0.753);
-  float: left;
-  font-family: var(--programming-font);
-  font-size: 0.7rem;
-  padding: 0 0 5px 15px;
-}
-
-.pic-ref a:first-child{
-  color: rgb(243, 192, 232, 0.753);
-}
-
-.pic-ref a:last-child{
-  color: rgba(101, 202, 241, 0.753);
-}
-
-
 
 .logo{
   display: flex;
@@ -54,12 +25,21 @@ body{
 }
 
 .logo.one{
+  color: white;
   width: 50px;
   height: 60px;
   margin: 4px -8px 0 15px;
   transform: scale(0.7);
 }
 
+.logo.two{
+  font-size: 1rem;
+  padding: 22px 0 0 5px;
+  text-transform: uppercase;
+  font-family: var(--programming-font);
+  font-weight: bold;
+  color: white;
+}
 .logo-semi-colon{
   color: rgb(243, 87, 87);
 }
@@ -69,13 +49,6 @@ body{
   color: rgb(87, 243, 243);
 }
 
-.logo.two{
-  font-size: 1rem;
-  padding: 22px 0 0 5px;
-  text-transform: uppercase;
-  font-family: var(--programming-font);
-  font-weight: bold;
-}
 
 .logo.three{
   font-size: 1.5rem;
@@ -101,6 +74,10 @@ body{
   font-size: 1.1rem;
 }
 
+.navbar li a{
+  color: white;
+}
+
 .navbar li a:hover{
   color: rgb(29, 183, 255);
   font-size: 1.2rem;
@@ -108,7 +85,7 @@ body{
 
 .navbar li .select{
   color: orange;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .navbar li .select .highlight{
@@ -145,6 +122,16 @@ body{
 
 .welcome-page{
   position: relative;
+  border: 5px solid brown;
+}
+
+
+#video-background{
+  z-index: -3;
+  max-width: 100%;
+  position: abs;
+  height: auto;
+  border: 4px solid green;
 }
 
 .welcome-page p{
@@ -152,13 +139,32 @@ body{
   font-family: (--programming-font);
   font-weight: bold;
   color: rgba(199, 199, 199, 0.568);
-  position: absolute;
-  bottom: 0;
-  top: 200px;
+  /*position: absolute;*/
+  top:0;
+  right: 0;
   left: 150px;
-  display: inline;
-  width: 40%;
+  display: block;
+  margin: 10px 10px 0 10px;
+  height: 250px;
+  width: 500px;
+  border: 1px solid blue;
 }
+
+.pic-ref{
+  color: rgba(128, 128, 128, 0.753);
+  font-family: var(--programming-font);
+  font-size: 0.7rem;
+  border: 1.5px solid orange;
+}
+
+.pic-ref a:first-child{
+  color: rgb(243, 192, 232, 0.753);
+}
+
+.pic-ref a:last-child{
+  color: rgba(101, 202, 241, 0.753);
+}
+
 
 @media screen and (max-width: 790px) {
   .navbar li, .navbar .dot-divider{
@@ -170,58 +176,19 @@ body{
     align-self: flex-end;
   }
 
-  #video-background{
-    left: 10px;
-  }
 }
 
 
 @media screen and (max-width: 700px) {
-  .welcome-page p{
-    left: 70px;
-    font-size: 4rem;
-  }
-
-  #video-background{
-    left: -10px;
-  }
 }
 
 @media screen and (max-width : 600px) {
-  .welcome-page p{
-    font-size: 3rem;
-  }
-
-  #video-background{
-    left: -40px;
-  }
 }
 
 @media screen and (max-width: 400px) {
-  .welcome-page p{
-    font-size: 3rem;
-    top: 80px;
-    left: 40px;
-
-  }
-
-  #video-background{
-    left: -200px;
-    top: 40px;
-  }
 }
 
 @media screen and (max-width: 310px) {
-  .welcome-page p{
-    font-size: 2.1rem;
-    top: 80px;
-    left: 20px;
-  }
-
-  #video-background{
-    left: -340px;
-    top: -10px;
-  }
 }
 
 @media screen and (max-width: 250px) {
