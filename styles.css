@@ -19,12 +19,14 @@ body{
 #video-background{
   position:fixed;
   z-index: -1;
-  width: 50%;
+  max-width: 1000px;
   right: 0;
   left: 40%;
   height: auto;
   text-align: center;
 }
+
+
 
 .pic-ref{
   position: absolute;
@@ -158,23 +160,58 @@ body{
   width: 40%;
 }
 
-
 @media screen and (max-width: 790px) {
   .navbar li, .navbar .dot-divider{
     display: none;
   }
 
   .menubtn{
-    color: white;
-    font-size: 20px;
-    padding: 15px;
     display: inline;
+    align-self: flex-end;
   }
 
   #video-background{
-    width: 100%;
-    left: 10%;
+    left: 10px;
   }
+}
+
+
+@media screen and (max-width: 700px) {
+  .welcome-page p{
+    left: 70px;
+    font-size: 4rem;
+  }
+
+  #video-background{
+    left: -10px;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .welcome-page p{
+    font-size: 3rem;
+  }
+
+  #video-background{
+    left: -40px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .logo.two{
+    display: none;
+  }
+
+  .welcome-page p{
+    font-size: 2.5rem;
+    top: 100px;
+  }
+
+  #video-background{
+    left: -350px;
+  }
+
+
 }
 
 @keyframes typing-animation {
