@@ -197,25 +197,40 @@ body{
   }
 }
 
-@media screen and (max-width: 350px) {
-  .logo.two{
-    display: none;
-  }
-
+@media screen and (max-width: 400px) {
   .welcome-page p{
-    font-size: 4rem;
-    top: 120px;
+    font-size: 3rem;
+    top: 80px;
     left: 40px;
 
   }
 
   #video-background{
     left: -200px;
-    top: 10px;
+    top: 40px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .welcome-page p{
+    font-size: 2.1rem;
+    top: 80px;
+    left: 20px;
   }
 
-
+  #video-background{
+    left: -340px;
+    top: -10px;
+  }
 }
+
+@media screen and (max-width: 250px) {
+  .logo.two{
+    display: none;
+  }
+}
+
+
 
 @keyframes typing-animation {
   0% {
