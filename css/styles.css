@@ -153,11 +153,14 @@ header{
   color: rgba(199, 199, 199, 0.568);
   position: absolute;
   bottom: 0;
-  right: 0;
   top:  340px;
-  left: 200px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
   height: 250px;
-  width: 500px;
+  width: auto;
+  text-align: center;
   z-index: 0;
   /*border: 1px solid blue;*/
 }
@@ -193,14 +196,16 @@ header{
 
   .welcome-page p{
     font-size: 1rem;
-    font-family: (--programming-font);
     position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     bottom: 0;
     top: 150px;
-    left: 100px;
-    right: 0;
     z-index: 0;
     width: auto;
+    text-align: center;
   }
 
   .pic-ref{
