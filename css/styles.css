@@ -141,6 +141,7 @@ header{
   max-width: 100%;
   position: abs;
   height: auto;
+  
   /*border: 4px solid green;*/
 }
 
@@ -188,6 +189,22 @@ header{
   .menubtn{
     display: inline;
     align-self: flex-end;
+  }
+
+  .welcome-page p{
+    font-size: 1rem;
+    font-family: (--programming-font);
+    position: absolute;
+    bottom: 0;
+    top: 150px;
+    left: 100px;
+    right: 0;
+    z-index: 0;
+    width: auto;
+  }
+
+  .pic-ref{
+    font-size: 0.4rem;
   }
 
 }
