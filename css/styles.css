@@ -6,6 +6,7 @@
   text-decoration: none;
   list-style: none;
   color: white;
+  font-family: var(--programming-font);
 }
 
 /*Root selector*/
@@ -29,7 +30,7 @@ header{
   height: 60px;
   position: fixed;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 1 );
   z-index: 5;
 }
 
@@ -153,7 +154,7 @@ header{
   color: rgba(199, 199, 199, 0.568);
   position: absolute;
   bottom: 0;
-  top:  340px;
+  top:  550px;
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -170,6 +171,7 @@ header{
   color: rgba(128, 128, 128, 0.753);
   font-family: var(--programming-font);
   font-size: 0.7rem;
+  margin-left: 40px;
   /*border: 1.5px solid orange;*/
 }
 
@@ -181,6 +183,16 @@ header{
 /*change gif attribute color*/
 .pic-ref a:last-child{
   color: var(--programming-blue);
+}
+
+.about-page{
+  font-size: 0.9rem;
+  text-align: left;
+  margin: 30px 50px 0 50px;
+}
+
+.about-page :not(:first-child){
+  color: rgb(192, 191, 191);
 }
 
 /*media query to hide the navbar to compress as a quick menu for mobile responsiveness*/
@@ -210,6 +222,12 @@ header{
 
   .pic-ref{
     font-size: 0.4rem;
+    margin-left: 20px;
+  }
+
+  .about-page{
+    font-size: 0.5rem;
+    margin: 10px 15px 0 15px;
   }
 
 }
@@ -220,6 +238,7 @@ header{
   .logo-text{
     display: none;
   }
+  
 }
 
 
