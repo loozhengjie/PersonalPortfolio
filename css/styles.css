@@ -85,6 +85,7 @@ header{
   padding: 16px 10px 0 5px;
   font-family: var(--programming-font);
   font-size: 1.1rem;
+  width: auto;
 }
 
 /*navbar list on hovered pseudo selector*/
@@ -96,7 +97,6 @@ header{
 /*navbar list selected selector*/
 .navbar li .select{
   color: orange;
-  font-size: 1.1rem;
 }
 
 /*navbar list "<>" selector when list is not selected by default*/
@@ -112,7 +112,7 @@ header{
 /*navbar divider selector*/
 .dot-divider{
   font-size: 1.3rem;
-  padding-top: 18px;
+  padding-top: 14px;
 }
 
 /*navbar list last child selector to adjust the margin*/
@@ -129,6 +129,7 @@ header{
 .menubtn{
   font-size: 20px;
   padding: 20px;
+  cursor: pointer;
   display: none;
 }
 
@@ -159,7 +160,7 @@ header{
   right: 0; 
   margin-left: auto; 
   margin-right: auto; 
-  height: 250px;
+  height: auto;
   width: auto;
   text-align: center;
   z-index: 0;
@@ -170,9 +171,21 @@ header{
 .pic-ref{
   color: rgba(128, 128, 128, 0.753);
   font-family: var(--programming-font);
-  font-size: 0.7rem;
-  margin-left: 40px;
-  /*border: 1.5px solid orange;*/
+  font-size: 0.6rem;
+  position: absolute;
+  bottom: 0;
+  top:  70px;
+  left: 15px; 
+  right: 0; 
+  margin-left: 0; 
+  margin-right: auto; 
+  height: 20px;
+  width: 200px;
+  text-align: left;
+}
+
+.pic-ref span{
+  color: rgba(128, 128, 128, 0.753);
 }
 
 /*change gif attribute color*/
@@ -189,6 +202,7 @@ header{
   font-size: 0.9rem;
   text-align: left;
   margin: 30px 50px 0 50px;
+  display: none;
 }
 
 .about-page :not(:first-child){
@@ -196,7 +210,7 @@ header{
 }
 
 /*media query to hide the navbar to compress as a quick menu for mobile responsiveness*/
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 810px) {
   .navbar li, .navbar .dot-divider{
     display: none;
   }

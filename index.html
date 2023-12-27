@@ -24,7 +24,7 @@
   <body>
 
     <!--This is the the navbar, placed this on header-->
-    <header>
+    <header class="nav-header">
       <!--Navbar logo-->
       <div class="logo-container flex">
         <img class="logo-pic" src="logo.png" alt="portfolio logo"/>
@@ -34,22 +34,23 @@
        <!--Main Navbar-->
       <nav>
         <ul class="navbar flex">
+
           <!--Three line setup from awesome font-->
           <input type="checkbox" id="check">
-          <label for="check" class="menubtn">
+          <label for="check" class="menubtn" id="quick-menu">
             <i class="fa-solid fa-grip-lines"></i>
           </label> 
 
           <!--Navbar anchor-->
-          <li><a href="#welcome-page" class="select"><span class="highlight"><</span>Home<span class="highlight">></span></a></li>
+          <li><a href="#welcome-page" class="select" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li>
           <label class="dot-divider">.</label>
-          <li><a href="#about-page"><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
+          <li><a href="#about-page" id="abt-btn"><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
           <label class="dot-divider">.</label>
-          <li><a href="#"><span class="highlight"><</span>Skillsets<span class="highlight">></span></a></li>
+          <li><a href="#skill-page" id="skill-btn" ><span class="highlight"><</span>Skillsets<span class="highlight">></span></a></li>
           <label class="dot-divider">.</label>
-          <li><a href="#"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
+          <li><a href="#port-page" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
           <label class="dot-divider">.</label>
-          <li><a href="#"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
+          <li><a href="#contact-page" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
         </ul>
       </nav>
     </header>
@@ -63,7 +64,7 @@
           <!--One must obtain the media link from git lfs not the actual binary from the working directory-->
           <img src="https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/videobackground2.gif" id="video-background" alt="portfolio video">
           <p>Welcome to my portfolio<span class="welcome-dash typing">|</span></p>
-          <label class="pic-ref">Photo by <a href="https://unsplash.com/@erinwith?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Erin With</a> on <a href="https://unsplash.com/photos/black-and-silver-vintage-tv-peUaxU4loQI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></label>
+          <label class="pic-ref">Photo by <a href="https://unsplash.com/@erinwith?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Erin With</a> <span>on</span> <a href="https://unsplash.com/photos/black-and-silver-vintage-tv-peUaxU4loQI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash<span class="typing">|</span></a></label>
         </div>
       </div>
 
