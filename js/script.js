@@ -17,8 +17,8 @@ function openQuickMenu(){
 }
 
 function OpenHomePage(){
-    homepg.style.display="block";
-    abtpg.style.display="none";
+    /*homepg.style.display="block";
+    abtpg.style.display="none";*/
     homebtn.classList.add("select");
     aboutbtn.classList.remove("select");
     skillbtn.classList.remove("select");
@@ -27,8 +27,8 @@ function OpenHomePage(){
 }
 
 function OpenAboutPage(){
-    homepg.style.display="none";
-    abtpg.style.display="block";
+    /*homepg.style.display="none";
+    abtpg.style.display="block";*/
     aboutbtn.classList.add("select");
     homebtn.classList.remove("select");
     skillbtn.classList.remove("select");
@@ -71,5 +71,22 @@ contactbtn.addEventListener('click', OpenContactPage);
 /*function hideNav(){
    navbar[0].style.display="None";
 }
-window.addEventListener("wheel", hideNav );*/
 
+window.addEventListener("wheel", function (){navbar[0].style.display="None"} );*/
+let timeoutHandle = 0;
+
+window.addEventListener("scroll", function () {
+
+    navbar[0].style.display="None"; //hide div
+    console.log("Hide nav");
+    clearTimeout(timeoutHandle);
+    // call function to hide box after 5 seconds
+    timeoutHandle = setTimeout(hideBox, 250);
+ });
+
+  // hides box by setting display to 'none'
+  hideBox = () => {
+    navbar[0].style.display= "block";
+    console.log("unhide nav");
+};
+ 

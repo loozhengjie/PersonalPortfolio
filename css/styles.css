@@ -30,8 +30,12 @@ header{
   height: 60px;
   position: fixed;
   width: 100%;
-  background-color: rgba(0, 0, 0, 1 );
+  background-color: rgba(0, 0, 0, 0.658);
   z-index: 5;
+  border: 0.5px solid rgba(73, 73, 73, 0.767);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 /*Logo container selector*/
@@ -202,7 +206,7 @@ header{
   font-size: 0.9rem;
   text-align: left;
   margin: 30px 50px 0 50px;
-  display: none;
+  /*display: none;*/
 }
 
 .about-page :not(:first-child){
@@ -241,7 +245,7 @@ header{
 
   .about-page{
     font-size: 0.5rem;
-    margin: 10px 15px 0 15px;
+    margin: 0 15px 0 15px;
   }
 
 }
