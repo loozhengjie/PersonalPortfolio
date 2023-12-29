@@ -68,11 +68,6 @@ skillbtn.addEventListener('click', OpenSkillPage);
 portbtn.addEventListener('click', OpenPortPage);
 contactbtn.addEventListener('click', OpenContactPage);
 
-/*function hideNav(){
-   navbar[0].style.display="None";
-}
-
-window.addEventListener("wheel", function (){navbar[0].style.display="None"} );*/
 let timeoutHandle = 0;
 
 window.addEventListener("scroll", function () {
@@ -90,3 +85,11 @@ window.addEventListener("scroll", function () {
     console.log("unhide nav");
 };
  
+var quickMenuButton = document.getElementById("quick-menu");
+var listOfNavBar = document.getElementsByClassName("list");
+
+quickMenuButton.addEventListener("click", function(){
+    [].forEach.call(listOfNavBar, function(el){
+        el.style.display="inline";
+    });
+});
