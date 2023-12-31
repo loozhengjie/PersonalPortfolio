@@ -98,6 +98,11 @@ header{
   font-size: 1.2rem;
 }
 
+.mobile:hover{
+  color: var(--programming-blue);
+  font-size: 0.9rem;
+}
+
 /*navbar list selected selector*/
 .navbar li .select{
   color: orange;
@@ -136,6 +141,11 @@ header{
   cursor: pointer;
   display: none;
 }
+
+#quick-menu-cross{
+  display: none;
+}
+
 
 /*welcome page container selector*/
 .welcome-page{
@@ -224,7 +234,16 @@ header{
   left: 0;
   right: 0;
   height: auto;
+  border-radius: 50px;
+  margin-top: 30px;
 }
+
+.right{
+  text-align: left;
+  font-size: 0.9rem;
+  display: inline;
+}
+
 
 /*media query to hide the navbar to compress as a quick menu for mobile responsiveness*/
 @media screen and (max-width: 810px) {
@@ -261,6 +280,10 @@ header{
     margin: 0 15px 0 15px;
   }
 
+  .profile-pic{
+    max-width: 150px;
+  }
+
 }
 
 
@@ -268,6 +291,11 @@ header{
   /*Hide the LOO ZHENG-JIE logo when the screen is too small*/
   .logo-text{
     display: none;
+  }
+
+  .welcome-page p{
+    font-size: 0.6rem;
+    top: 100px;
   }
   
 }

@@ -88,8 +88,68 @@ window.addEventListener("scroll", function () {
 var quickMenuButton = document.getElementById("quick-menu");
 var listOfNavBar = document.getElementsByClassName("list");
 
+let cross = document.getElementById("quick-menu-cross");
+
 quickMenuButton.addEventListener("click", function(){
+    
     [].forEach.call(listOfNavBar, function(el){
-        el.style.display="inline";
+        /*el.add("right");*/
+        el.style.display="block";
+        el.style.fontSize= "100%"
+        el.style.borderBottom= "1px solid rgba(73, 73, 73, 0.767)";
     });
+
+    [].forEach.call(document.getElementsByClassName("logo"), function(el){
+        el.style.display="flex";
+    });
+
+    
+
+    document.getElementById("nav").classList.remove("flex");
+    document.getElementById("nav").classList.add("right");
+
+    let navcont= document.getElementById("nav-content-container");
+    navcont.style.position= "fixed";
+    navcont.style.right="0";
+    navcont.style.bottom="0";
+    navcont.style.top="5px";
+    navcont.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    navcont.style.border="1px solid rgba(73, 73, 73, 0.767)";
+    navcont.style.borderTopStyle= "none";
+    navcont.style.height= "100%";
+
+    quickMenuButton.style.display="none";
+
+    cross.style.display="inline";
+    cross.style.fontSize="75%";
+    cross.style.float= right;
+
+});
+
+cross.addEventListener("click", function(){
+    [].forEach.call(listOfNavBar, function(el){
+        el.style.display="none";
+    });
+
+    [].forEach.call(document.getElementsByClassName("logo"), function(el){
+        el.style.display="flex";
+    });
+
+    
+
+    document.getElementById("nav").classList.remove("right");
+    document.getElementById("nav").classList.add("flex");
+
+    let navcont= document.getElementById("nav-content-container");
+    navcont.style.position= "fixed";
+    navcont.style.right="0";
+    navcont.style.bottom="0";
+    navcont.style.top="5px";
+    navcont.style.backgroundColor = "none";
+    navcont.style.border="0px";
+    navcont.style.height= "auto";
+
+    quickMenuButton.style.display="inline";
+
+    cross.style.display="none";
 });
