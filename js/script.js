@@ -145,7 +145,7 @@ cross.addEventListener("click", function(){
     navcont.style.right="0";
     navcont.style.bottom="0";
     navcont.style.top="5px";
-    navcont.style.backgroundColor = "none";
+    navcont.style.backgroundColor = "rgba(0, 0, 0, 0)";
     navcont.style.border="0px";
     navcont.style.height= "auto";
 
