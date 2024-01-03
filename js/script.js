@@ -73,7 +73,7 @@ let timeoutHandle = 0;
 window.addEventListener("scroll", function () {
 
     navbar[0].style.display="None"; //hide div
-    console.log("Hide nav");
+    /*console.log("Hide nav");*/
     clearTimeout(timeoutHandle);
     // call function to hide box after 5 seconds
     timeoutHandle = setTimeout(hideBox, 250);
@@ -82,7 +82,7 @@ window.addEventListener("scroll", function () {
   // hides box by setting display to 'none'
   hideBox = () => {
     navbar[0].style.display= "block";
-    console.log("unhide nav");
+    /*console.log("unhide nav");*/
 };
  
 var quickMenuButton = document.getElementById("quick-menu");
@@ -153,3 +153,36 @@ cross.addEventListener("click", function(){
 
     cross.style.display="none";
 });
+
+/*window.addEventListener("load", (event) => {
+    const links = document.querySelectorAll('a');
+
+    const observer= new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting)
+        {
+            console.log("entry intersecting is: " + entry.target.getAttribute("id"));
+            links.forEach((link)=>{
+                if (link.getAttribute("href").substring(1) == entry.target.getAttribute("id"))
+                {
+                    link.classList.add("select");
+                }
+                else{
+                    link.classList.remove('select');
+                }
+            });
+            
+        }
+        else{
+            console.log("entry not intersecting is: " + entry.target.getAttribute("id"));
+        }
+    });
+});
+
+    document.querySelectorAll('a').forEach((link)=>{
+        observer.observe(link);
+    });
+
+});*/
+
+
