@@ -320,16 +320,18 @@ section{
   /*Hide the LOO ZHENG-JIE logo when the screen is too small*/
   
   #video-background{
-    left: 20%;
+    left: 18%;
   }
 
   .welcome-page p{
-    font-size: 1.3rem;
+    font-size: 2rem;
     position: absolute;
-    left: 0; 
-    right: 100px; 
+    left: 20px; 
+    right: 0; 
+    right: 0;
+    top: 550px;
     z-index: 0;
-    width: 7px;
+    width: auto;
     text-align: center;
   }
   
