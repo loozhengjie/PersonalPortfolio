@@ -161,12 +161,12 @@ header{
 
   position: relative;
   max-width: 1500px;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   right: 0;
   height: auto;
   border-radius: 50px;
-  margin-top: 30px;
+  margin-top: -100px;
   
   /*border: 4px solid green;*/
 }
@@ -236,6 +236,7 @@ header{
 .about-page p{
   color: rgb(192, 191, 191);
   margin: 0 30px 0 30px;
+  text-align: center;
 }
 
 .profile-section{
@@ -263,9 +264,12 @@ section{
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 100vh;
+  min-height: 150vh;
   overflow: hidden;
+  padding-bottom: 600px;
+  padding-top: 100px;
 }
+
 
 .skills-container{
   display: grid;

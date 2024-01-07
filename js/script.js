@@ -72,7 +72,7 @@ let timeoutHandle = 0;
 
 window.addEventListener("scroll", function () {
 
-    navbar[0].style.display="None"; //hide div
+    navbar[0].style.display="none"; //hide div
     /*console.log("Hide nav");*/
     clearTimeout(timeoutHandle);
     // call function to hide box after 5 seconds
@@ -154,35 +154,28 @@ cross.addEventListener("click", function(){
     cross.style.display="none";
 });
 
-/*window.addEventListener("load", (event) => {
-    const links = document.querySelectorAll('a');
 
-    const observer= new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        if(entry.isIntersecting)
+
+const navlinks = document.querySelectorAll('.anchor');
+const sections = document.querySelectorAll('section');
+let currentsection = "welcome-page"
+
+window.addEventListener('scroll', ()=>{
+    sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop -200)
         {
-            console.log("entry intersecting is: " + entry.target.getAttribute("id"));
-            links.forEach((link)=>{
-                if (link.getAttribute("href").substring(1) == entry.target.getAttribute("id"))
-                {
-                    link.classList.add("select");
-                }
-                else{
-                    link.classList.remove('select');
-                }
-            });
-            
+            currentsection = section.id;
         }
-        else{
-            console.log("entry not intersecting is: " + entry.target.getAttribute("id"));
+    });
+    
+    navlinks.forEach(navlink => {
+        if(navlink.href.includes(currentsection))
+        {
+            console.log("current section: " + currentsection);
+            document.querySelector('.select').classList.remove('select');
+            navlink.classList.add("select");
         }
     });
 });
-
-    document.querySelectorAll('a').forEach((link)=>{
-        observer.observe(link);
-    });
-
-});*/
 
 
