@@ -4,25 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LZJ | Portfolio</title>
-
     <!--Cache setup for github pages loading-->
     <meta http-equiv='cache-control' content='no-cache'> 
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
-
     <!--Link the awesome font 5 kit-->
     <script src="https://kit.fontawesome.com/5b5b9210a8.js" crossorigin="anonymous"></script> 
-
     <!--The font from google-->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
-
     <!--Link the styles.css-->
     <link href="css/styles.css" rel="stylesheet">
-
-    
     <!--Icon for the page-->
     <link rel="icon" href="img/layer4.ico">
-
    </head>
 
   <body>
@@ -34,21 +27,17 @@
         <img class="logo-pic logo" src="img/layer4.png" alt="portfolio logo"/>
         <label class="logo-text logo"><span class="logo-semi-colon">{</span>Loo Zheng<span class="logo-dash">-</span>Jie<span class="logo-semi-colon">}</span></label>
       </div>
-      
        <!--Main Navbar-->
       <nav id="nav-content-container">
         <ul class="navbar flex" id="nav">
-
           <!--Three line setup from awesome font-->
           <input type="checkbox" id="check">
           <label for="check" class="menubtn" id="quick-menu">
             <i class="fa-solid fa-grip-lines"></i>
           </label> 
-
           <label for="check" class="menubtn" id="quick-menu-cross">
             <i class="fas fa-times"></i>
           </label> 
-
           <!--Navbar anchor-->
           <li class="list"><a href="#welcome-page" class="anchor select" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li>
           <label class="dot-divider">.</label>
@@ -62,10 +51,11 @@
         </ul>
       </nav>
     </header>
-
+    <div class="loading-screen">
+      <img class="loading-logo typing" src="img/layer4.png" alt="portfolio logo"/>
+    </div>
     <!--Content for the website-->
     <div class="content-box">
-
       <!--Welcome section-->
       <section class="welcome-page " id="welcome-page">
         <div class="welcome-background">
@@ -76,7 +66,6 @@
           <label class="pic-ref">Photo by <a href="https://unsplash.com/@erinwith?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Erin With</a> <span>on</span> <a href="https://unsplash.com/photos/black-and-silver-vintage-tv-peUaxU4loQI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash<span class="typing">|</span></a></label>
         </div>
       </section>
-
       <!--About me section-->
       <section class="about-page" id="about-page">
         <h1><span><</span>About-Me<span>></span></h1>
@@ -85,7 +74,6 @@
           <img class="profile-pic" src="img/propic3.png" alt="portfolio profile pic"/>
         </div>
       </section>
-
       <!--Skillsets section-->
       <section class="skill-page" id="skill-page">
         <h1><span><</span>SkillSets<span>></span></h1>
@@ -96,17 +84,7 @@
           <label>Stencyl</label>
           <label>HTML</label>
         </div>
-        <!--<ul>
-          <li>C#</li>
-          <li>C++</li>
-          <li>Unreal Engine</li>
-          <li>Stencyl</li>
-          <li>Photoshop</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>-->
       </section>
-
       <!--Portfolios section-->
       <section class="port-page" id="port-page">
         <h1><span><</span>Portfolios<span>></span></h1>
@@ -117,10 +95,7 @@
           <li>Unreal Showcase</li>
         </ul>
       </section>
-
     </div>
-
-
     <!--Link JS-->
     <script src="js/script.js"></script>
   </body>

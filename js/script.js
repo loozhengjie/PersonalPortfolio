@@ -1,5 +1,9 @@
-window.onload = function(){
-}
+window.addEventListener('load', function() {
+    console.log('All assets are loaded');
+    const loader = document.querySelector(".loading-screen");
+    loader.classList.add("hidden");
+    document.body.removeChild(loader);
+})
 
 let homebtn = document.getElementById("home-btn");
 let aboutbtn = document.getElementById("abt-btn");
@@ -77,14 +81,14 @@ window.addEventListener("scroll", function () {
     clearTimeout(timeoutHandle);
     // call function to hide box after 5 seconds
     timeoutHandle = setTimeout(hideBox, 250);
- });
+});
 
-  // hides box by setting display to 'none'
-  hideBox = () => {
+// hides box by setting display to 'none'
+hideBox = () => {
     navbar[0].style.display= "block";
     /*console.log("unhide nav");*/
 };
- 
+
 var quickMenuButton = document.getElementById("quick-menu");
 var listOfNavBar = document.getElementsByClassName("list");
 
@@ -177,5 +181,13 @@ window.addEventListener('scroll', ()=>{
         }
     });
 });
+
+
+
+
+
+
+
+
 
 
