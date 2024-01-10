@@ -25,6 +25,12 @@ body{
   display: flex;
 }
 
+/*Hidden class*/
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
 /*Header selector for navbar*/
 header{
   height: 60px;
@@ -56,7 +62,6 @@ header{
   font-size: 1rem;
   padding: 22px 0 0 5px;
   text-transform: uppercase;
-  font-family: var(--programming-font);
   font-weight: bold;
 }
 
@@ -87,7 +92,6 @@ header{
 .navbar li{
   margin: 5px;
   padding: 16px 10px 0 5px;
-  font-family: var(--programming-font);
   font-size: 1.1rem;
   width: auto;
 }
@@ -163,10 +167,7 @@ header{
   height: 80px;
 }
 
-.hidden{
-  opacity: 0;
-  visibility: hidden;
-}
+
 
 
 /*media query to hide the navbar to compress as a quick menu for mobile responsiveness*/
@@ -179,62 +180,15 @@ header{
     display: inline;
     align-self: flex-end;
   }
-
-  #video-background{
-    left: 40%;
-  }
-
-  .welcome-page p{
-    font-size: 1.5rem;
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    z-index: 0;
-    width: auto;
-    text-align: center;
-  }
-
-
 }
 
 @media screen and (max-width: 500px) {
   /*Hide the LOO ZHENG-JIE logo when the screen is too small*/
-  
-  #video-background{
-    left: 18%;
-  }
 
-  .welcome-page p{
-    font-size: 2rem;
-    position: absolute;
-    left: 20px; 
-    right: 0; 
-    right: 0;
-    top: 570px;
-    z-index: 0;
-    width: auto;
-    text-align: center;
-  }
-  
 }
 
 @media screen and (max-width: 330px) {
   /*Hide the LOO ZHENG-JIE logo when the screen is too small*/
-  
-  .about-page, .skill-page, .port-page{
-    font-size: 0.8rem;
-    margin: 0 15px 0 15px;
-  }
-
-  .profile-pic{
-    max-width: 250px;
-  }
-
-  #video-background{
-    left: 15%;
-  }
   
 }
 
@@ -243,25 +197,6 @@ header{
   /*Hide the LOO ZHENG-JIE logo when the screen is too small*/
   .logo-text{
     display: none;
-  }
-
-  .welcome-page p{
-    font-size: 0.6rem;
-    top: 100px;
-  }
-
-  .pic-ref{
-    font-size: 0.3rem;
-    margin-left: 0px;
-  }
-
-  .about-page, .skill-page, .port-page{
-    font-size: 0.5rem;
-    margin: 0 15px 0 15px;
-  }
-
-  .profile-pic{
-    max-width: 150px;
   }
   
 }
