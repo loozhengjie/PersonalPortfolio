@@ -1,8 +1,11 @@
 window.addEventListener('load', function() {
     console.log('All assets are loaded');
     const loader = document.querySelector(".loading-screen");
-    loader.classList.add("hidden");
-    document.body.removeChild(loader);
+    setTimeout(() => {
+        loader.classList.add("hidden");
+        document.body.removeChild(loader);
+    }, 1000);
+   
 })
 
 let homebtn = document.getElementById("home-btn");
