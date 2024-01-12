@@ -1,6 +1,7 @@
+//Loading screen to make sure all the elements in the page is loaded correctly
 window.addEventListener('load', function() {
     console.log('All assets are loaded');
-    const loader = document.querySelector(".loading-screen");
+    const loader = document.querySelector(".preloader");
     setTimeout(() => {
         loader.classList.add("hidden");
         document.body.removeChild(loader);
@@ -8,72 +9,25 @@ window.addEventListener('load', function() {
    
 })
 
-let homebtn = document.getElementById("home-btn");
-let aboutbtn = document.getElementById("abt-btn");
-let skillbtn = document.getElementById("skill-btn");
-let portbtn = document.getElementById("port-btn");
-let contactbtn = document.getElementById("contact-btn");
-
-let homepg = document.getElementById("welcome-page");
-let abtpg = document.getElementById("about-page");
-
-let navbar =  document.getElementsByClassName("nav-header");
-
-function openQuickMenu(){
-    alert("about button pressed");
+//Navbar active functions
+//Setup variables
+const navbarbtns = document.querySelectorAll(".anchor");
+//Set a function to remove all the active classes 
+function RemoveAllActiveBtns(){
+    navbarbtns.forEach(btn =>{
+        btn.classList.remove("active");
+    });
 }
+//For loop to ensure that all the nav buttons when clicked, 
+//remove all the active classes before updating the active class to itself
+navbarbtns.forEach(btn =>{
+    btn.addEventListener("click", function(){
+        RemoveAllActiveBtns();
+        btn.classList.add("active");
+    })
+});
 
-function OpenHomePage(){
-    /*homepg.style.display="block";
-    abtpg.style.display="none";*/
-    homebtn.classList.add("select");
-    aboutbtn.classList.remove("select");
-    skillbtn.classList.remove("select");
-    portbtn.classList.remove("select");
-    contactbtn.classList.remove("select");
-}
 
-function OpenAboutPage(){
-    /*homepg.style.display="none";
-    abtpg.style.display="block";*/
-    aboutbtn.classList.add("select");
-    homebtn.classList.remove("select");
-    skillbtn.classList.remove("select");
-    portbtn.classList.remove("select");
-    contactbtn.classList.remove("select");
-}
-
-function OpenSkillPage(){
-    aboutbtn.classList.remove("select");
-    homebtn.classList.remove("select");
-    skillbtn.classList.add("select");
-    portbtn.classList.remove("select");
-    contactbtn.classList.remove("select");
-}
-
-function OpenPortPage(){
-    aboutbtn.classList.remove("select");
-    homebtn.classList.remove("select");
-    skillbtn.classList.remove("select");
-    portbtn.classList.add("select");
-    contactbtn.classList.remove("select");
-}
-
-function OpenContactPage(){
-    aboutbtn.classList.remove("select");
-    homebtn.classList.remove("select");
-    skillbtn.classList.remove("select");
-    portbtn.classList.remove("select");
-    contactbtn.classList.add("select");
-}
-
-homebtn.addEventListener('click', OpenHomePage);
-
-aboutbtn.addEventListener('click', OpenAboutPage);
-
-skillbtn.addEventListener('click', OpenSkillPage);
-portbtn.addEventListener('click', OpenPortPage);
-contactbtn.addEventListener('click', OpenContactPage);
 
 let timeoutHandle = 0;
 
