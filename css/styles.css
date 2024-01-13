@@ -163,17 +163,12 @@ header{
   display: flex;*/
 }
 
-.preload-text{
-  text-align: left;
-  padding: 0px 0 0 10px;
-}
-
 /*Preloader-image*/
 .loading-logo{
   width: 15px;
   height: 20px;
-  margin-top: 10px;
-  transform: scale(00.5px);
+  margin-top: 0px;
+  transform: scale(0.5px);
   
 }
 
@@ -188,13 +183,21 @@ header{
   display: inline-block;
 }
 
-.preloader p{
-  width: 120%;
-  white-space: nowrap;
-  overflow: hidden ;
-  animation: key-typing 2s steps(30);
+
+.preloader div:first-child{
+  animation: 0.5s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
 }
 
+.preloader .preload-text{
+  white-space: nowrap;
+  overflow: hidden ;
+  text-align: left;
+  width: 0%;
+  animation: key-typing 2s steps(30) 1.5s;
+  animation-fill-mode: forwards;
+}
 
 
 
@@ -210,7 +213,7 @@ header{
     align-self: flex-end;
   }
 
-  .preloader p{
+  #preloader-code-section{
     font-size: 0.6rem;
   }
 
@@ -218,7 +221,6 @@ header{
     width: 10px;
     height: 11px;
     transform: scale(0.5px);
-    
   }
 }
 
@@ -282,6 +284,16 @@ header{
 
 /*Typing effect animation*/
 @keyframes key-typing {
-  from {width:0};
+  from {width:0}
+  to {width: 120%};
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }
 
