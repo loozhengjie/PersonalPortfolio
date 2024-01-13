@@ -179,8 +179,9 @@ header{
   animation-iteration-count: infinite;
 }
 
-#preloader-code-section{
+#preloader-code-container{
   display: inline-block;
+  margin: 10px 0 0 10px;
 }
 
 
@@ -190,7 +191,7 @@ header{
   visibility: hidden;
 }
 
-.preloader .preload-text{
+.preload-text{
   white-space: nowrap;
   overflow: hidden ;
   text-align: left;
@@ -213,7 +214,7 @@ header{
     align-self: flex-end;
   }
 
-  #preloader-code-section{
+  #preloader-code-container{
     font-size: 0.6rem;
   }
 
