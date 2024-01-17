@@ -18,6 +18,9 @@
 /*Body selector*/
 body{
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /*flexbox selector*/
@@ -159,8 +162,6 @@ header{
   width: 100%;
   height: 100%;
   text-align: left;
-  /*flex-direction: column;
-  display: flex;*/
 }
 
 /*Preloader-image*/
@@ -200,6 +201,44 @@ header{
   animation-fill-mode: forwards;
 }
 
+.content-pages{
+  display: flex;
+  flex-direction: column;
+}
+
+.content-pages section{
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+
+.content-pages section:first-child{
+  /*background: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");*/
+  background-size: 700px;
+  background-repeat: no-repeat;
+}
+.content-pages section h1{
+  padding-top: 80px;
+  color: rgb(180, 175, 175);
+}
+
+.footer{
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  
+}
+.footer-logo{
+  width: 20px;
+  height: 25px;
+}
+
+
+.footer p{
+  padding: 2px 0 0 10px;
+}
+
+
 
 
 
@@ -222,6 +261,25 @@ header{
     width: 10px;
     height: 11px;
     transform: scale(0.5px);
+  }
+
+  .content-pages section:first-child{
+    background-position: center 10px;
+  }
+
+  .content-pages section h1{
+    font-size: 0.9rem;
+  }
+
+  .footer-logo{
+    width: 15px;
+    height: 16px;
+  }
+
+  .footer{
+    font-size: 0.5rem;
+    margin-top: auto;
+    margin-bottom: 20px;
   }
 }
 
