@@ -46,6 +46,7 @@ hideBox = () => {
     /*console.log("unhide nav");*/
 };
 
+//get the quick menu
 var quickMenuButton = document.getElementById("quick-menu");
 var listOfNavBar = document.getElementsByClassName("list");
 

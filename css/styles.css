@@ -180,6 +180,7 @@ header{
   animation-iteration-count: infinite;
 }
 
+/*Preloader code word container*/
 #preloader-code-container{
   display: inline-block;
   margin: 10px 0 0 10px;
