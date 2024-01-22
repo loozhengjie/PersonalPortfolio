@@ -217,7 +217,7 @@ header{
   width: 100%;
   text-align: center;
   position: fixed;
-  height: 95vh;
+  height: 95dvh;
 }
 
 .content-pages section:first-of-type{
