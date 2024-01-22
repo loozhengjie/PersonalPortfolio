@@ -34,6 +34,29 @@ body{
   visibility: hidden;
 }
 
+/*Preloader container*/
+.preloader{
+  display: inline-block;
+  margin: 10px 0 0 10px;
+}
+
+/*Preloader main text*/
+.preloader p label{
+  animation: 0.5s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+/*Preloader animated text*/
+.preload-text{
+  white-space: nowrap;
+  overflow: hidden ;
+  text-align: left;
+  width: 0%;
+  animation: key-typing 2s steps(30) 1.5s;
+  animation-fill-mode: forwards;
+}
+
 /*Header selector for navbar*/
 header{
   height: 70px;
@@ -41,10 +64,6 @@ header{
   width: 100%;
   background-color: rgba(0, 0, 0, 0.658);
   z-index: 5;
-  /*border: 0.5px solid rgba(73, 73, 73, 0.767);
-  border-top: none;
-  border-left: none;
-  border-right: none;*/
 }
 
 /*Logo container selector*/
@@ -180,63 +199,45 @@ header{
   animation-iteration-count: infinite;
 }
 
-/*Preloader code word container*/
-#preloader-code-container{
-  display: inline-block;
-  margin: 10px 0 0 10px;
-}
-
-
-.preloader div:first-child{
-  animation: 0.5s fadeIn;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-}
-
-.preload-text{
-  white-space: nowrap;
-  overflow: hidden ;
-  text-align: left;
-  width: 0%;
-  animation: key-typing 2s steps(30) 1.5s;
-  animation-fill-mode: forwards;
-}
-
 .content-pages{
-  display: flex;
+  /*display: flex;*/
+  position: relative;
   flex-direction: column;
 }
 
 .content-pages section{
   width: 100%;
-  height: 500px;
   text-align: center;
+  position: absolute;
+  height: 100vh;
 }
 
-.content-pages section:first-child{
-  /*background: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");*/
-  background-size: 700px;
+.content-pages section:first-of-type{
+  border: 1px solid white;
+  background-image: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");
+  background-size: 1000px;
   background-repeat: no-repeat;
 }
+
 .content-pages section h1{
-  padding-top: 80px;
+  padding-top: 370px;
   color: rgb(180, 175, 175);
 }
 
+/*Footer*/
 .footer{
   font-size: 0.9rem;
   display: flex;
   justify-content: center;
   padding-bottom: 15px;
   margin-top: auto;
-  
 }
+/*Footer logo*/
 .footer-logo{
   width: 20px;
   height: 25px;
 }
-
-
+/*Footer text content*/
 .footer p{
   padding: 2px 0 0 10px;
 }
@@ -256,7 +257,7 @@ header{
     align-self: flex-end;
   }
 
-  #preloader-code-container{
+  .preloader{
     font-size: 0.6rem;
   }
 
