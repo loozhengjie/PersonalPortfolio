@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     setTimeout(() => {
         loader.classList.add("hidden");
         document.body.removeChild(loader);
-    }, 500);
+    }, 5000);
    
 })
 
