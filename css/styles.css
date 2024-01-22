@@ -216,8 +216,8 @@ header{
 .content-pages section{
   width: 100%;
   text-align: center;
-  position: absolute;
-  height: 100vh;
+  position: fixed;
+  height: 95vh;
 }
 
 .content-pages section:first-of-type{
