@@ -20,9 +20,8 @@ body{
   background-color: black;
   display: flex;
   flex-direction: column;
-  height: 100dvh;
-  align-content: flex-start;
-  position: fixed;
+  min-height: 100dvh;
+  align-content: flex-start
 }
 
 /*flexbox selector*/
