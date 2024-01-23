@@ -20,8 +20,9 @@ body{
   background-color: black;
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
-  align-content: flex-start
+  height: 100dvh;
+  align-content: flex-start;
+  position: fixed;
 }
 
 /*flexbox selector*/
@@ -222,7 +223,8 @@ header{
 
 .content-pages section:first-of-type{
   /*border: 1px solid white;*/
-  background-image: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");
+  /*background-image: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");*/
+  background-color: green;
   background-size: 1000px;
   background-repeat: no-repeat;
   background-position: center 0px ;
