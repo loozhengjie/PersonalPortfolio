@@ -18,12 +18,27 @@ function RemoveAllActiveBtns(){
         btn.classList.remove("active");
     });
 }
+
+const contentPages = document.querySelectorAll(".content");
 //For loop to ensure that all the nav buttons when clicked, 
 //remove all the active classes before updating the active class to itself
 navbarbtns.forEach(btn =>{
     btn.addEventListener("click", function(){
         RemoveAllActiveBtns();
         btn.classList.add("active");
+        contentPages.forEach(section=>{
+            
+            if (("#" + section.id) == btn.getAttribute("href"))
+            {
+                console.log(section.id + " is equal to " + btn.getAttribute("href"));
+                section.classList.remove("hidden");
+            }
+            else
+            {
+                console.log(section.id + " is not equal to " + btn.getAttribute("href"));
+                section.classList.add("hidden");
+            }
+        });
     })
 });
 

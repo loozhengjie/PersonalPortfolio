@@ -65,7 +65,7 @@ body{
 
 /*Header selector for navbar*/
 header{
-  height: 70px;
+  height: 60px;
   position: fixed;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.658);
@@ -207,36 +207,36 @@ header{
   animation-iteration-count: infinite;
 }
 
-.content-pages{
+.content-pages-container{
   /*display: flex;*/
   position: relative;
   flex-direction: column;
 }
 
-.content-pages section{
+.content-pages-container section{
   width: 100%;
   text-align: center;
   position: fixed;
   height: 95dvh;
 }
 
-.content-pages section:first-of-type{
+.content-pages-container section:first-of-type{
   /*border: 1px solid white;*/
-  /*background-image: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");*/
-  background-color: green;
+  background-image: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");
+  /* background-color: darkgreen; */
   background-size: 1000px;
   background-repeat: no-repeat;
   background-position: center 0px ;
 }
 
-.content-pages section h1{
+.content-pages-container section h1{
   padding-top: 370px;
   color: rgb(180, 175, 175);
 }
 
 /*Footer*/
 .footer{
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   display: flex;
   justify-content: center;
   padding-bottom: 15px;
@@ -244,12 +244,12 @@ header{
 }
 /*Footer logo*/
 .footer-logo{
-  width: 20px;
-  height: 25px;
+  width: 15px;
+  height: 20px;
 }
 /*Footer text content*/
 .footer p{
-  padding: 2px 0 0 10px;
+  padding: 2px 0 0 3px;
 }
 
 
@@ -277,11 +277,11 @@ header{
     transform: scale(0.5px);
   }
 
-  .content-pages section:first-child{
+  .content-pages-container:first-child{
     background-position: center 10px;
   }
 
-  .content-pages section h1{
+  .content-pages-container section h1{
     font-size: 0.9rem;
   }
 
