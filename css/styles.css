@@ -17,7 +17,7 @@
 
 /*Body selector*/
 body{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
@@ -212,7 +212,7 @@ header{
   /*display: flex;*/
   position: relative;
   flex-direction: column;
-   padding-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .content-pages-container section{
@@ -224,8 +224,8 @@ header{
 
 .content-pages-container section:first-of-type{
   /*border: 1px solid white;*/
-  background-image: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif");
-  /* background-color: darkgreen; */
+  /* background-image: url("https://media.githubusercontent.com/media/loozhengjie/PersonalPortfolio/main/gifs/videobackground4.gif"); */
+  background-color: darkgreen;
   background-size: 1000px;
   background-repeat: no-repeat;
   background-position: center 0px ;
@@ -245,7 +245,11 @@ header{
 .content-pages-container section:nth-child(2) h1{
   font-size: 1.4rem;
   color: rgb(180, 175, 175);
+}
 
+.content-pages-container section:nth-child(2) h2{
+  font-size: 1.2rem;
+  color: rgb(180, 175, 175);
 }
 
 .about-pic{
@@ -261,9 +265,36 @@ header{
 #about-page p{
   color: grey;
   font-size: 0.8rem;
-  padding: 0 10px 0 10px;
+  padding: 0 50px 0 50px;
 }
 
+.skillset-list-container{
+  text-align: center;
+}
+
+.skillset-list-container ul{
+  display: inline-block; 
+	text-align: left;
+}
+
+.skillset-list-container li{
+  color: grey;
+  font-size: 0.8rem;
+  list-style: circle;
+} 
+
+/* .skillset-list-container li{
+  color: grey;
+  font-size: 0.8rem;
+  list-style: circle;
+  margin-left: 45%;
+  padding-right: 40%;
+  text-align: center;
+} */
+
+.skillset-list-container li::marker{
+  color: grey;
+}
 
 /*Footer*/
 .footer{
@@ -323,7 +354,7 @@ header{
   }
 
   #about-page p{
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
   
 
