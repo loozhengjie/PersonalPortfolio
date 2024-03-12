@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LZJ | Portfolio</title>
-    <!--Cache setup for github pages loading-->
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
     <!--Link the awesome font 5 kit-->
     <script src="https://kit.fontawesome.com/5b5b9210a8.js" crossorigin="anonymous"></script> 
     <!--The font from google-->
@@ -20,9 +17,9 @@
 
   <body>
     <!--This is the the navbar, placed this on header-->
-    <header class="nav-header">
-      <!--Navbar logo-->
-      <div class="logo-container flex logo">
+    <header class="header">
+      <!--Navbar logo and text "{Loo Zheng-Jie}"-->
+      <div class="logo-container flex">
         <img class="logo-pic logo" src="img/layer4.png" alt="portfolio logo"/>
         <label class="logo-text logo"><span class="logo-semi-colon">{</span>Loo Zheng<span class="logo-dash">-</span>Jie<span class="logo-semi-colon">}</span></label>
       </div>
@@ -51,6 +48,7 @@
         </ul>
       </nav>
     </header>
+
     <!--Preloader content-->
     <div class="preloader">
       <p>
@@ -73,18 +71,25 @@
       </p>
     </div>
 
-    <div class="content-pages-container">
-      <section id="home-page" class="content hidden">
-        <h1><span><</span> Welcome to my portfolio <span>></span></h1>
-      </section>
-      <section id="about-page" class="content hidden">
+    <!--Content Pages-->
+    <section class="content-pages-container">
+      <!-- <div id="home-page" class="content border">
+        <h1><span><</span> Hi! <span>></span><span class="typing">|</span></h1>
+      </div> -->
+      <div id="about-page" class="flex content">
         <div class="about-pic"></div>
-        <!-- <h1 class=""><span><</span> About me <span>></span></h1> -->
+        <h1 class="hi"><span><</span>Hi!<span>></span><span class = "typing">|</span></h1>
+        </br>
         <p>
-          Hi! My name is Loo Zheng-Jie! I am an aspiring programmer currently active in the game development field.
-          I believe that the will to learn and a good problem solving skills are the core foundations of a successful programmer.
+          My name is <span>Loo Zheng-Jie</span>! I am an <span>aspiring programmer</span> currently <span>active</span> in the <span>game development</span> field.
+          I believe that the <span>will to learn</span> and a good <span> problem solving</span> skills are the core foundations of a successful programmer.
         </p>
-        <br>
+        <div class="linebreak"></div>
+        <p>
+          I also have <span>experience working in groups</span> from school projects, game jams and commercial projects.  
+          I am a <span>team player</span> that is willing to <span>listen</span> and actively <span>communicate</span> in a team. 
+        </p>
+        <!-- </br>
         <p>
           As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
           majoring in game programming, I am well equipped with sufficient game development and programming skills. 
@@ -92,26 +97,48 @@
           using game engines and programming languages ranging from 
           Unity, Unreal Engine, C++, C#, HTML, CSS and vanilla Javascript.
         </p>
-        </br>
-        <p>
-          I also have experience working in groups from school projects, game jams and commercial projects.  I am a team player that is willing to listen and actively communicate in a team. 
+        </br> -->
+      </div>
+
+      
+      <div id="skill-page" class="content border">
+        <p class>
+          As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
+          majoring in game programming, I am well equipped with sufficient game development and programming skills. 
         </p>
         </br>
-        <!-- <div class="skillset-list-container">
-          <ul>
-            <li class="">C++</li>
-            <li class="">Unity</li>
-            <li class="">Unreal Engine</li>
-            <li class="">HTML</li>
-            <li class="">CSS</li>
-          </ul>
-        </div> -->
+        <p>
+          That includes proficiency of 
+          using game engines and programming languages such as: 
+        </p>
+        </br>
+        <div class="skill-content">
+          <div>Unity</div>
+          <div>Unreal Engine</div> 
+          <div>C++</div>
+          <div>C#</div> 
+          <div>HTML</div>
+          <div>CSS</div>
+          <div>Vanilla Javascript</div>
+          <!-- <div>Photoshop</div> -->
+        </div>
+      </div>
 
-      </section>
-      <section id="port-page" class="content">
+
+
+      <div id="port-page" class="content border">
         <h1><span><</span> Portfolio <span>></span></h1>
-      </section>
-    </div>
+      </br>
+        <p>Here are the recent projects that I have involved:</p>
+        <div class="portfolio-menu">
+          <div>Chiyo</div>
+          <div>Other Life</div>
+          <div>Contriver</div>
+          <div>Ronin</div>
+          <div>Unreal Showcases<div>
+        </div>
+      </div>
+    </section>
     
     <!--Footer-->
     <footer class="footer">
