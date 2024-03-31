@@ -86,11 +86,19 @@ quickMenuButton.addEventListener("click", function(){
     navcont.style.display= "block";
     navcont.style.visibility="visible";
     navcont.style.opacity="1";
+    navcont.classList.add("dropdown");
+    if(navcont.classList.contains("dropdown-reverse"))
+    {
+        navcont.classList.remove("dropdown-reverse");
+    }
+    
+  
 
 
     // quickMenuButton.style.display="none";
     quickMenuButton.style.visibility="hidden";
     quickMenuButton.style.opacity="0";
+    quickMenuButton.style.transform="scaleX(-1)";
 
     cross.style.display="block";
 
@@ -107,14 +115,27 @@ cross.addEventListener("click", function(){
 
 
     let navcont= document.getElementById("nav-content-container");
-    navcont.style.display= "none";
-    navcont.style.opacity="0";
-    navcont.style.visibility="hidden";
+    navcont.classList.remove("dropdown");
+    navcont.classList.add("dropdown-reverse");
 
+    setTimeout(() => {
+        navcont.style.display= "none";
+        navcont.style.opacity="0";
+        navcont.style.visibility="hidden";
+    }, 500);
+
+    // navcont.style.display= "none";
+    // navcont.style.opacity="0";
+    // navcont.style.visibility="hidden";
+
+  
+
+    
 
     // quickMenuButton.style.display="inline";
     quickMenuButton.style.visibility="visible";
     quickMenuButton.style.opacity="1";
+    quickMenuButton.style.transform="scaleX(1)";
 
     cross.style.display="none";
 });
