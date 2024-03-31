@@ -203,9 +203,12 @@ header{
   display: none;
 }
 
+.active .highlight{
+  display: inline;
+}
+
 /*navbar list "<>" selector when list is selected or highlighed*/
 .active .highlight, .navbar li a:hover .highlight{
-  display: inline;
   color: var(--programming-blue);
 }
 
@@ -225,14 +228,21 @@ header{
 /*quick menu selector, disable it by default unless screen is compressed*/
 #menu-button{
   font-size: 20px;
-  display: inline;
-  
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
 }
 
 /*The cross in quick menu*/
 #menu-cross{
   display: none;
-  padding-bottom: 10px;
+  font-size: 25px;
+  transition: transform 500ms ease-in-out;
+}
+
+#menu-cross:hover{
+  transform: rotateX(180deg);
+
 }
 
 

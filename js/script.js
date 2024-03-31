@@ -27,17 +27,16 @@ navbarbtns.forEach(btn =>{
         RemoveAllActiveBtns();
         btn.classList.add("active");
         contentPages.forEach(section=>{
-            
-            // if (("#" + section.id) == btn.getAttribute("href"))
-            // {
-            //     console.log(section.id + " is equal to " + btn.getAttribute("href"));
-            //     section.classList.remove("hidden");
-            // }
-            // else
-            // {
-            //     console.log(section.id + " is not equal to " + btn.getAttribute("href"));
-            //     section.classList.add("hidden");
-            // }
+            if (("#" + section.id) == btn.getAttribute("href"))
+            {
+                console.log(section.id + " is equal to " + btn.getAttribute("href"));
+                section.classList.remove("hidden");
+            }
+            else
+            {
+                console.log(section.id + " is not equal to " + btn.getAttribute("href"));
+                section.classList.add("hidden");
+            }
         });
     })
 });
@@ -89,7 +88,9 @@ quickMenuButton.addEventListener("click", function(){
     navcont.style.opacity="1";
 
 
-    quickMenuButton.style.display="none";
+    // quickMenuButton.style.display="none";
+    quickMenuButton.style.visibility="hidden";
+    quickMenuButton.style.opacity="0";
 
     cross.style.display="block";
 
@@ -111,8 +112,9 @@ cross.addEventListener("click", function(){
     navcont.style.visibility="hidden";
 
 
-    quickMenuButton.style.display="inline";
-    quickMenuButton.style.alignSelf="flex-end";
+    // quickMenuButton.style.display="inline";
+    quickMenuButton.style.visibility="visible";
+    quickMenuButton.style.opacity="1";
 
     cross.style.display="none";
 });
