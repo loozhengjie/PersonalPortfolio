@@ -17,38 +17,45 @@
 
   <body>
     <!--This is the the navbar, placed this on header-->
-    <header class="header">
+    <header class="header container">
       <!--Navbar logo and text "{Loo Zheng-Jie}"-->
-      <div class="logo-container flex">
-        <img class="logo-pic logo" src="img/layer4.png" alt="portfolio logo"/>
-        <label class="logo-text logo"><span class="logo-semi-colon">{</span>Loo Zheng<span class="logo-dash">-</span>Jie<span class="logo-semi-colon">}</span></label>
+      <div class="logo-container border">
+
+        <div class="logo-pic-container">
+          <img class="logo-pic" src="img/layer4.png" alt="portfolio logo"/>
+        </div>
+        <label class="logo-text"><span class="logo-semi-colon"><</span>Loo Zheng<span class="logo-dash">-</span>Jie<span class="logo-semi-colon">></span></label>
+
+        <!--Three line setup from awesome font-->
+        <button id="menu-button">
+          <i class="fa-solid fa-grip-lines menubtn"></i>
+        </button> 
+
+        <!--Cross icon setup from awesome font-->
+        <button id="menu-cross">
+          <!-- <i class="fas fa-times"></i> -->
+          <i class="fa fa-window-minimize cross" aria-hidden="true"></i>
+        </button>
+
       </div>
        <!--Main Navbar-->
-      <nav id="nav-content-container">
-        <ul class="navbar flex" id="nav">
-          <!--Three line setup from awesome font-->
-          <input type="checkbox" id="check">
-          <label for="check" class="menubtn" id="quick-menu">
-            <i class="fa-solid fa-grip-lines"></i>
-          </label> 
-          <!--Cross icon setup from awesome font-->
-          <label for="check" class="menubtn" id="quick-menu-cross">
-            <i class="fas fa-times"></i>
-          </label> 
+      <nav id="nav-content-container" class="container">
+        <ul class="navbar">
           <!--Navbar anchor-->
-          <li class="list"><a href="#home-page" class="anchor active" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li>
-          <label class="dot-divider">.</label>
-          <li class="list"><a href="#about-page" class="anchor" id="abt-btn" ><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
-          <label class="dot-divider">.</label>
+          <li class="list active"><a href="#home-page" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li>
+          <!-- <label class="dot-divider">.</label> -->
+          <li class="list"><a href="#about-page"id="abt-btn" ><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
+          <!-- <label class="dot-divider">.</label> -->
           <!-- <li class="list"><a href="#skill-page" class="anchor" id="skill-btn"><span class="highlight"><</span>Skillsets<span class="highlight">></span></a></li>
           <label class="dot-divider">.</label> -->
-          <li class="list"><a href="#port-page" class="anchor" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
-          <label class="dot-divider">.</label>
-          <li class="list"><a href="#contact-page" class="anchor" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
+          <li class="list"><a href="#port-page" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
+          <!-- <label class="dot-divider">.</label> -->
+          <li class="list"><a href="#contact-page" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
         </ul>
       </nav>
     </header>
 
+   
     <!--Preloader content-->
     <div class="preloader">
       <p>
@@ -71,74 +78,43 @@
       </p>
     </div>
 
-    <!--Content Pages-->
-    <section class="content-pages-container">
-      <!-- <div id="home-page" class="content border">
-        <h1><span><</span> Hi! <span>></span><span class="typing">|</span></h1>
-      </div> -->
-      <div id="about-page" class="flex content">
-        <div class="about-pic"></div>
-        <h1 class="hi"><span><</span>Hi!<span>></span><span class = "typing">|</span></h1>
-        </br>
-        <p>
-          My name is <span>Loo Zheng-Jie</span>! I am an <span>aspiring programmer</span> currently <span>active</span> in the <span>game development</span> field.
-          I believe that the <span>will to learn</span> and a good <span> problem solving</span> skills are the core foundations of a successful programmer.
+    <div class="content">
+      <div class = "about-me container">
+        <div class="profile-pic">
+        <img src="img/propic4.png" alt="portfolio logo"/>
+        </div>
+        <h1 class ="">Header</h1>
+        <p class="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates ea nesciunt dolorem tempore natus quas id cumque facilis voluptatum. Accusantium fugit veritatis dolor alias iusto voluptate eligendi quam nam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nostrum iste exercitationem, expedita explicabo ad cupiditate accusamus nobis fuga sunt consequuntur possimus et velit, optio itaque nemo quaerat, in iusto.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus praesentium vel a possimus molestiae reiciendis placeat consequatur eum perferendis dignissimos fugit mollitia aperiam et est, eaque facere ipsa!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perspiciatis fuga accusantium vero. Sapiente odit dolores repellendus impedit consequatur velit eligendi rem ullam nihil similique iusto, totam, minima animi tempora!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias eveniet officiis labore nesciunt praesentium eum veniam impedit quidem. Veniam repellendus voluptatum molestias dolor aut praesentium culpa ipsam eligendi officiis?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, asperiores aliquid. Nesciunt, modi eum. Illum velit quas soluta dolorum voluptates inventore rerum unde voluptatem eum. Numquam aut nulla omnis iure!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque error modi expedita distinctio laboriosam, ut reprehenderit ad eum quisquam similique nemo? Fugit delectus quia dolores molestias debitis eos unde repellendus!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut cupiditate reiciendis ipsam sunt repellendus ducimus iste dolorum aperiam! Possimus quos labore repellat unde atque reiciendis at, suscipit laboriosam facere?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, eligendi sunt culpa similique quibusdam veniam commodi molestias incidunt quam labore illo placeat maiores dolorem maxime ad adipisci. Deserunt, officia ducimus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iure quasi non reprehenderit atque cumque veritatis molestias quo culpa, officia aspernatur nam impedit minima dolorem placeat! Excepturi distinctio tempora ipsa?
         </p>
-        <div class="linebreak"></div>
-        <p>
-          I also have <span>experience working in groups</span> from school projects, game jams and commercial projects.  
-          I am a <span>team player</span> that is willing to <span>listen</span> and actively <span>communicate</span> in a team. 
-        </p>
-        <!-- </br>
-        <p>
-          As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
-          majoring in game programming, I am well equipped with sufficient game development and programming skills. 
-          That includes proficiency of 
-          using game engines and programming languages ranging from 
-          Unity, Unreal Engine, C++, C#, HTML, CSS and vanilla Javascript.
-        </p>
-        </br> -->
       </div>
 
+      <div class = "skillsets container">
+        <h1 class ="">Header</h1>
+        <p class="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates ea nesciunt dolorem tempore natus quas id cumque facilis voluptatum. Accusantium fugit veritatis dolor alias iusto voluptate eligendi quam nam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nostrum iste exercitationem, expedita explicabo ad cupiditate accusamus nobis fuga sunt consequuntur possimus et velit, optio itaque nemo quaerat, in iusto.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus praesentium vel a possimus molestiae reiciendis placeat consequatur eum perferendis dignissimos fugit mollitia aperiam et est, eaque facere ipsa!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perspiciatis fuga accusantium vero. Sapiente odit dolores repellendus impedit consequatur velit eligendi rem ullam nihil similique iusto, totam, minima animi tempora!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias eveniet officiis labore nesciunt praesentium eum veniam impedit quidem. Veniam repellendus voluptatum molestias dolor aut praesentium culpa ipsam eligendi officiis?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, asperiores aliquid. Nesciunt, modi eum. Illum velit quas soluta dolorum voluptates inventore rerum unde voluptatem eum. Numquam aut nulla omnis iure!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque error modi expedita distinctio laboriosam, ut reprehenderit ad eum quisquam similique nemo? Fugit delectus quia dolores molestias debitis eos unde repellendus!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut cupiditate reiciendis ipsam sunt repellendus ducimus iste dolorum aperiam! Possimus quos labore repellat unde atque reiciendis at, suscipit laboriosam facere?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, eligendi sunt culpa similique quibusdam veniam commodi molestias incidunt quam labore illo placeat maiores dolorem maxime ad adipisci. Deserunt, officia ducimus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iure quasi non reprehenderit atque cumque veritatis molestias quo culpa, officia aspernatur nam impedit minima dolorem placeat! Excepturi distinctio tempora ipsa?
+        </p>
+      </div>
       
-      <div id="skill-page" class="content border">
-        <p class>
-          As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
-          majoring in game programming, I am well equipped with sufficient game development and programming skills. 
-        </p>
-        </br>
-        <p>
-          That includes proficiency of 
-          using game engines and programming languages such as: 
-        </p>
-        </br>
-        <div class="skill-content">
-          <div>Unity</div>
-          <div>Unreal Engine</div> 
-          <div>C++</div>
-          <div>C#</div> 
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>Vanilla Javascript</div>
-          <!-- <div>Photoshop</div> -->
-        </div>
-      </div>
-
-
-
-      <div id="port-page" class="content border">
-        <h1><span><</span> Portfolio <span>></span></h1>
-      </br>
-        <p>Here are the recent projects that I have involved:</p>
-        <div class="portfolio-menu">
-          <div>Chiyo</div>
-          <div>Other Life</div>
-          <div>Contriver</div>
-          <div>Ronin</div>
-          <div>Unreal Showcases<div>
-        </div>
-      </div>
-    </section>
+    </div>
     
     <!--Footer-->
     <footer class="footer">

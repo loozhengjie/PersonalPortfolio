@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
 
 //Navbar active functions
 //Setup variables
-const navbarbtns = document.querySelectorAll(".anchor");
+const navbarbtns = document.querySelectorAll(".list");
 //Set a function to remove all the active classes 
 function RemoveAllActiveBtns(){
     navbarbtns.forEach(btn =>{
@@ -28,16 +28,16 @@ navbarbtns.forEach(btn =>{
         btn.classList.add("active");
         contentPages.forEach(section=>{
             
-            if (("#" + section.id) == btn.getAttribute("href"))
-            {
-                console.log(section.id + " is equal to " + btn.getAttribute("href"));
-                section.classList.remove("hidden");
-            }
-            else
-            {
-                console.log(section.id + " is not equal to " + btn.getAttribute("href"));
-                section.classList.add("hidden");
-            }
+            // if (("#" + section.id) == btn.getAttribute("href"))
+            // {
+            //     console.log(section.id + " is equal to " + btn.getAttribute("href"));
+            //     section.classList.remove("hidden");
+            // }
+            // else
+            // {
+            //     console.log(section.id + " is not equal to " + btn.getAttribute("href"));
+            //     section.classList.add("hidden");
+            // }
         });
     })
 });
@@ -62,71 +62,57 @@ hideBox = () => {
 };
 
 //get the quick menu
-var quickMenuButton = document.getElementById("quick-menu");
+var quickMenuButton = document.getElementById("menu-button");
 var listOfNavBar = document.getElementsByClassName("list");
 
-let cross = document.getElementById("quick-menu-cross");
+let cross = document.getElementById("menu-cross");
 
 quickMenuButton.addEventListener("click", function(){
     
     [].forEach.call(listOfNavBar, function(el){
-        /*el.add("right");*/
-        el.style.display="block";
-        el.style.fontSize= "100%"
-        el.style.borderBottom= "1px solid rgba(73, 73, 73, 0.767)";
+        // el.style.display="block";
+        // el.style.fontSize= "100%"
+        // el.style.width="100%";
+        // el.style.margin="0 0 10px 0";
+        // el.style.backgroundColor = "#1a2e05";
+        // el.style.padding="0 0 0 10px";
     });
 
     [].forEach.call(document.getElementsByClassName("logo"), function(el){
         el.style.display="flex";
     });
 
-    
-
-    document.getElementById("nav").classList.remove("flex");
-    document.getElementById("nav").classList.add("right");
 
     let navcont= document.getElementById("nav-content-container");
-    navcont.style.position= "fixed";
-    navcont.style.right="0";
-    navcont.style.bottom="0";
-    navcont.style.top="5px";
-    navcont.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
-    navcont.style.border="1px solid rgba(73, 73, 73, 0.767)";
-    navcont.style.borderTopStyle= "none";
-    navcont.style.height= "100%";
+    navcont.style.display= "block";
+    navcont.style.visibility="visible";
+    navcont.style.opacity="1";
+
 
     quickMenuButton.style.display="none";
 
-    cross.style.display="inline";
-    cross.style.fontSize="75%";
-    cross.style.float= right;
+    cross.style.display="block";
 
 });
 
 cross.addEventListener("click", function(){
     [].forEach.call(listOfNavBar, function(el){
-        el.style.display="none";
+        // el.style.display="none";
     });
 
     [].forEach.call(document.getElementsByClassName("logo"), function(el){
         el.style.display="flex";
     });
 
-    
-
-    document.getElementById("nav").classList.remove("right");
-    document.getElementById("nav").classList.add("flex");
 
     let navcont= document.getElementById("nav-content-container");
-    navcont.style.position= "fixed";
-    navcont.style.right="0";
-    navcont.style.bottom="0";
-    navcont.style.top="5px";
-    navcont.style.backgroundColor = "rgba(0, 0, 0, 0)";
-    navcont.style.border="0px";
-    navcont.style.height= "auto";
+    navcont.style.display= "none";
+    navcont.style.opacity="0";
+    navcont.style.visibility="hidden";
+
 
     quickMenuButton.style.display="inline";
+    quickMenuButton.style.alignSelf="flex-end";
 
     cross.style.display="none";
 });
