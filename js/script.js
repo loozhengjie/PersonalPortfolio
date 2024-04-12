@@ -1,7 +1,7 @@
 //Loading screen to make sure all the elements in the page is loaded correctly
 window.addEventListener('load', function() {
     console.log('All assets are loaded');
-    const loader = document.querySelector(".preloader");
+    const loader = document.getElementById("preloader");
     setTimeout(() => {
         loader.classList.add("hidden");
         document.body.removeChild(loader);
@@ -47,7 +47,7 @@ let timeoutHandle = 0;
 
 window.addEventListener("scroll", function () {
 
-    navbar[0].style.display="none"; //hide div
+    // navbar[0].style.display="none"; //hide div
     /*console.log("Hide nav");*/
     clearTimeout(timeoutHandle);
     // call function to hide box after 5 seconds
@@ -56,7 +56,7 @@ window.addEventListener("scroll", function () {
 
 // hides box by setting display to 'none'
 hideBox = () => {
-    navbar[0].style.display= "block";
+    // navbar[0].style.display= "block";
     /*console.log("unhide nav");*/
 };
 
@@ -65,79 +65,61 @@ var quickMenuButton = document.getElementById("menu-button");
 var listOfNavBar = document.getElementsByClassName("list");
 
 let cross = document.getElementById("menu-cross");
+let menuline= document.getElementById("menu-line");
+let dropdownline = document.getElementById("dropup-line");
 
 quickMenuButton.addEventListener("click", function(){
     
-    [].forEach.call(listOfNavBar, function(el){
-        // el.style.display="block";
-        // el.style.fontSize= "100%"
-        // el.style.width="100%";
-        // el.style.margin="0 0 10px 0";
-        // el.style.backgroundColor = "#1a2e05";
-        // el.style.padding="0 0 0 10px";
-    });
-
-    [].forEach.call(document.getElementsByClassName("logo"), function(el){
-        el.style.display="flex";
-    });
-
-
     let navcont= document.getElementById("nav-content-container");
-    navcont.style.display= "block";
-    navcont.style.visibility="visible";
-    navcont.style.opacity="1";
+
     navcont.classList.add("dropdown");
     if(navcont.classList.contains("dropdown-reverse"))
     {
         navcont.classList.remove("dropdown-reverse");
     }
     
-  
+    
+    menuline.style.transform="scaleX(-1)";
+    navcont.style.display= "block";
+    navcont.style.visibility="visible";
+    navcont.style.opacity="1";
 
 
-    // quickMenuButton.style.display="none";
-    quickMenuButton.style.visibility="hidden";
-    quickMenuButton.style.opacity="0";
-    quickMenuButton.style.transform="scaleX(-1)";
 
-    cross.style.display="block";
+    setTimeout(() => {
+        quickMenuButton.style.visibility="hidden";
+        quickMenuButton.style.opacity="0";
+        quickMenuButton.style.display="none";
+        cross.style.display="block";
+    }, 500);
 
 });
 
 cross.addEventListener("click", function(){
-    [].forEach.call(listOfNavBar, function(el){
-        // el.style.display="none";
-    });
-
-    [].forEach.call(document.getElementsByClassName("logo"), function(el){
-        el.style.display="flex";
-    });
-
+    dropdownline.style.transform="scaleY(-1)";
 
     let navcont= document.getElementById("nav-content-container");
     navcont.classList.remove("dropdown");
     navcont.classList.add("dropdown-reverse");
 
+    menuline.style.transform="scaleX(1)";
+
+    
+
     setTimeout(() => {
         navcont.style.display= "none";
         navcont.style.opacity="0";
         navcont.style.visibility="hidden";
-    }, 500);
 
-    // navcont.style.display= "none";
-    // navcont.style.opacity="0";
-    // navcont.style.visibility="hidden";
-
-  
-
+        quickMenuButton.style.visibility="visible";
+        quickMenuButton.style.opacity="1";
+        quickMenuButton.style.display="block";
     
+        cross.style.display="none";
+        dropdownline.style.transform="scaleY(1)";
 
-    // quickMenuButton.style.display="inline";
-    quickMenuButton.style.visibility="visible";
-    quickMenuButton.style.opacity="1";
-    quickMenuButton.style.transform="scaleX(1)";
-
-    cross.style.display="none";
+    }, 500);
+   
 });
 
 

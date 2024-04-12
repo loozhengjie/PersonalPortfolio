@@ -12,114 +12,184 @@
     <!--Link the styles.css-->
     <link href="css/styles.css" rel="stylesheet">
     <!--Icon for the page-->
-    <link rel="icon" href="img/layer4.ico">
+    <link rel="icon" href="img/logo.ico">
    </head>
 
   <body>
+
+    <!--Preloader content-->
+    <div id="preloader">
+      <div id="preloader-content" class="">
+
+       
+        
+        <div id = "preloader-fade" class=" fade-in">
+          <div id="preloader-icon" class="">
+            <img class="rotate" src="img/logo.png" alt="portfolio logo"/>
+          </div>
+          <label class="">
+            Welcome to my portfolio!
+            <br>©2024 by Loo Zheng-Jie
+            <br>Loading executable <span><"</span>potfolio.exe<span>"></span>..
+            <br>Encoding: ------  -------- --------
+            <br>01001100 01101111 01101111 00100000 
+            <br>01011010 01101000 01100101 01101110 
+            <br>01100111 00101101 01001010 01101001 
+            <br>01100101 00001010 -------- --------
+          </label>
+        </div>
+
+        <div id="preload-text" class="key-typing">
+          <p>
+            Initializing 
+            <span><</span>
+            "portfolio.exe"
+            <span>></span>
+            ....
+            <label class="typing">|</label>           
+            <!-- <img class="loading-logo rotate one" src="img/logo.png" alt="portfolio logo"/> -->
+          </p>
+         
+        </div> 
+
+      </div>
+    </div>
+
+    
     <!--This is the the navbar, placed this on header-->
     <header class="header container">
       <!--Navbar logo and text "{Loo Zheng-Jie}"-->
-      <div class="logo-container border">
+      <section class="header-content container">
 
         <div class="logo-pic-container">
-          <img class="logo-pic" src="img/layer4.png" alt="portfolio logo"/>
+          <img class="logo-pic" src="img/logo.png" alt="portfolio logo"/>
         </div>
         <label class="logo-text"><span class="logo-semi-colon"><</span>Loo Zheng<span class="logo-dash">-</span>Jie<span class="logo-semi-colon">></span></label>
 
-        <!--Three line setup from awesome font-->
-        <button id="menu-button">
-          <i class="fa-solid fa-grip-lines menubtn"></i>
-        </button> 
+        <section class="dropdown-container">
 
-        <!--Cross icon setup from awesome font-->
-        <button id="menu-cross">
-          <!-- <i class="fas fa-times"></i> -->
-          <i class="fa fa-caret-down cross" aria-hidden="true"></i>
-        </button>
+          <div class="button-container">    
+            <button id="menu-button" class="button">
+              <span><</span>
+              <i class="fa-solid fa-grip-lines" id="menu-line"></i>
+              <span>></span>
+            </button> 
+            
 
-      </div>
-       <!--Main Navbar-->
-      <nav id="nav-content-container" class="container">
-        <ul class="navbar">
-          <!--Navbar anchor-->
-          <li class="list active"><a href="#home-page" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li>
-          <!-- <label class="dot-divider">.</label> -->
-          <li class="list"><a href="#about-page"id="abt-btn" ><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
-          <!-- <label class="dot-divider">.</label> -->
-          <!-- <li class="list"><a href="#skill-page" class="anchor" id="skill-btn"><span class="highlight"><</span>Skillsets<span class="highlight">></span></a></li>
-          <label class="dot-divider">.</label> -->
-          <li class="list"><a href="#port-page" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
-          <!-- <label class="dot-divider">.</label> -->
-          <li class="list"><a href="#contact-page" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
-        </ul>
-      </nav>
+            <button id="menu-cross" class="button">
+              <span><</span>
+              <i class="fa fa-caret-down" id="dropup-line"></i>
+              <span>></span>
+            </button>
+          </div>
+         
+           <!--Main Navbar-->
+          <nav id="nav-content-container" class="container">
+            <ul class="navbar">
+              <!--Navbar anchor-->
+              <!-- <li class="list active"><a href="#home-page" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li> -->
+              <label class="dot-divider">.</label>
+              <li class="list"><a href="#about-page"id="abt-btn" ><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
+              <label class="dot-divider">.</label>
+              <!-- <li class="list"><a href="#skill-page" class="anchor" id="skill-btn"><span class="highlight"><</span>Skillsets<span class="highlight">></span></a></li>
+              <label class="dot-divider">.</label> -->
+              <li class="list"><a href="#port-page" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
+              <label class="dot-divider">.</label>
+              <li class="list"><a href="#contact-page" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
+            </ul>
+          </nav>
+
+        </section>
+
+      </section>
+
     </header>
 
+    
    
-    <!--Preloader content-->
-    <div class="preloader">
-      <p>
-        <label>
-          Welcome to my portfolio!
-          <br>©2024 by Loo Zheng-Jie
-          <br>Allocating memory address....
-          <br>Parsing <span><"</span>potfolio.exe<span>"></span>..
-          <br>Loading executable <span><"</span>potfolio.exe<span>"></span>..
-          <br>Encoding: ------  -------- --------
-          <br>01001100 01101111 01101111 00100000 
-          <br>01011010 01101000 01100101 01101110 
-          <br>01100111 00101101 01001010 01101001 
-          <br>01100101 00001010 -------- --------
-        </label>
-        <div class="preload-text">
-          <label>Initializing <span><</span>"portfolio.exe"<span>></span>....<label class="typing">|</label></label>
-          <img class="loading-logo rotate one" src="img/layer4.png" alt="portfolio logo"/>
-        </div>        
-      </p>
-    </div>
+    
+    <section class="content container">
 
-    <div class="content">
-      <div class = "about-me container">
+      <section class = "about-me">
         <div class="profile-pic">
-        <img src="img/propic4.png" alt="portfolio logo"/>
+          <img src="img/profile-pic.png" alt="profile-pic"/>
         </div>
-        <h1 class ="">Header</h1>
-        <p class="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates ea nesciunt dolorem tempore natus quas id cumque facilis voluptatum. Accusantium fugit veritatis dolor alias iusto voluptate eligendi quam nam.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nostrum iste exercitationem, expedita explicabo ad cupiditate accusamus nobis fuga sunt consequuntur possimus et velit, optio itaque nemo quaerat, in iusto.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus praesentium vel a possimus molestiae reiciendis placeat consequatur eum perferendis dignissimos fugit mollitia aperiam et est, eaque facere ipsa!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perspiciatis fuga accusantium vero. Sapiente odit dolores repellendus impedit consequatur velit eligendi rem ullam nihil similique iusto, totam, minima animi tempora!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias eveniet officiis labore nesciunt praesentium eum veniam impedit quidem. Veniam repellendus voluptatum molestias dolor aut praesentium culpa ipsam eligendi officiis?
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, asperiores aliquid. Nesciunt, modi eum. Illum velit quas soluta dolorum voluptates inventore rerum unde voluptatem eum. Numquam aut nulla omnis iure!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque error modi expedita distinctio laboriosam, ut reprehenderit ad eum quisquam similique nemo? Fugit delectus quia dolores molestias debitis eos unde repellendus!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut cupiditate reiciendis ipsam sunt repellendus ducimus iste dolorum aperiam! Possimus quos labore repellat unde atque reiciendis at, suscipit laboriosam facere?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, eligendi sunt culpa similique quibusdam veniam commodi molestias incidunt quam labore illo placeat maiores dolorem maxime ad adipisci. Deserunt, officia ducimus.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iure quasi non reprehenderit atque cumque veritatis molestias quo culpa, officia aspernatur nam impedit minima dolorem placeat! Excepturi distinctio tempora ipsa?
-        </p>
-      </div>
+        <div class="profile-pic-text">
+          <h1><span><</span>Hi!<span>></span><span class="typing">|</span></h1>
+        </div>
+        
+        <section class ="profile-description text-center">
+          <p>
+            My name is <span>Loo Zheng-Jie</span>! I am an <span>aspiring programmer</span> currently <span>active</span> in the <span>game development</span> field.
+          </p>
+          <br>
+          <p>
+            I believe that the <span>will to learn</span> and a good <span> problem solving</span> skills are the core foundations of a successful programmer.
+        </section>
 
-      <div class = "skillsets container">
-        <h1 class ="">Header</h1>
-        <p class="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates ea nesciunt dolorem tempore natus quas id cumque facilis voluptatum. Accusantium fugit veritatis dolor alias iusto voluptate eligendi quam nam.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nostrum iste exercitationem, expedita explicabo ad cupiditate accusamus nobis fuga sunt consequuntur possimus et velit, optio itaque nemo quaerat, in iusto.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus praesentium vel a possimus molestiae reiciendis placeat consequatur eum perferendis dignissimos fugit mollitia aperiam et est, eaque facere ipsa!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perspiciatis fuga accusantium vero. Sapiente odit dolores repellendus impedit consequatur velit eligendi rem ullam nihil similique iusto, totam, minima animi tempora!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias eveniet officiis labore nesciunt praesentium eum veniam impedit quidem. Veniam repellendus voluptatum molestias dolor aut praesentium culpa ipsam eligendi officiis?
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, asperiores aliquid. Nesciunt, modi eum. Illum velit quas soluta dolorum voluptates inventore rerum unde voluptatem eum. Numquam aut nulla omnis iure!
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque error modi expedita distinctio laboriosam, ut reprehenderit ad eum quisquam similique nemo? Fugit delectus quia dolores molestias debitis eos unde repellendus!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut cupiditate reiciendis ipsam sunt repellendus ducimus iste dolorum aperiam! Possimus quos labore repellat unde atque reiciendis at, suscipit laboriosam facere?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, eligendi sunt culpa similique quibusdam veniam commodi molestias incidunt quam labore illo placeat maiores dolorem maxime ad adipisci. Deserunt, officia ducimus.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iure quasi non reprehenderit atque cumque veritatis molestias quo culpa, officia aspernatur nam impedit minima dolorem placeat! Excepturi distinctio tempora ipsa?
-        </p>
-      </div>
+        <section id ="skillsets" class="text-center">
+          <div id="skillset-background"></div>
+          <p class="">
+            As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
+            majoring in game programming, I am well equipped with sufficient game development and programming skills.
+            <!-- Unity, Unreal Engine, C++, C#, HTML, CSS and vanilla Javascript. -->
+          </p>
+          <br>
+          <p>
+            That includes proficiency of 
+            using game engines and programming languages ranging from: 
+            </p>
+        </section>
+      </section>
       
-    </div>
+
+      <!-- <section class = "portfolio">
+        <h1>My portfolios: </h1>
+        <div>
+          <ul id="porfolio-list-container container" class="">
+            <li class ="portfolio-list">
+              <section id="chiyo-select" class="">
+                <div id="chiyo-logo" class="">
+                  <img src="img/ChiyoLogo.png" alt="Chiyo logo" class="portfolio-logo"/>
+                </div>
+              </section>
+            </li>
+            <li class ="portfolio-list">
+              <section id="otherlife-select">
+                <div id="otherlife-logo">
+                  <img src="img/OtherLifeLogo.png" alt="portfolio logo" class="portfolio-logo"/>
+                </div>
+              </section>
+             
+            </li>
+            <li class ="portfolio-list">
+              <section id="contriver-select">
+                <div id="contriver-logo">
+                  <img src="img/ContriverLogo.png" alt="portfolio logo" class="portfolio-logo"/>
+                </div>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+
+
+    
+        
+
+
+    </section>
     
     <!--Footer-->
     <footer class="footer">
-      <img class="footer-logo" src="img/layer4.png" alt="footer-loading-logo"/>
-      <p>@ 2024 by Loo Zheng-Jie</p>
+      <div class="container footer-content">
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="footer-loading-logo"/>
+        </div> 
+        <p>@ 2024 by Loo Zheng-Jie</p>
+      </div>
+      
+      
     </footer>
 
     <!--Link JS-->

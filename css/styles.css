@@ -29,9 +29,10 @@
 /*Body selector*/
 body{
   background-color: rgb(0, 0, 0);
-  min-height: 100dvh;
+  min-height: 100vh;
   position: relative;
   width: 100%;
+  border: 1px solid black;
 }
 
 /* utility classes---------------------------------------------------------------------------------------- */
@@ -51,6 +52,7 @@ body{
   border: 1px solid white;
 }
 
+
 .container{
   width: 100%;
   margin-left: auto;
@@ -60,49 +62,78 @@ body{
   padding-right: 0.5rem;
   /* border: 1px solid white; */
 }
-/* ------------------------------------------------------------------------------------------------------- */
 
-
-/* Preloader---------------------------------------------------------------------------------------------- */
-/*Preloader container*/
-.preloader{
-  display: inline-block;
-  background-color: black;
-  position: fixed;
-  z-index: 20;
-  width: 100%;
-  height: 100dvh;
-  /* text-align: left; */
-  padding: 10px;
-  font-size: 0.6rem;
-  /* border: 1px solid white; */
-  margin-top: -68px;
+/*selector for line with typing animation*/
+.typing{
+  animation-name: typing-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-/*Preloader main text*/
-.preloader p label{
+.fade-in{
   animation: 0.5s fadeIn;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
 
-/*Preloader animated text*/
-.preload-text{
+.key-typing{
   white-space: nowrap;
   overflow: hidden ;
-  text-align: left;
+
   width: 0%;
-  animation: key-typing 2s steps(30) 1.5s;
+  animation: key-typing 2s steps(90) 1.5s;
   animation-fill-mode: forwards;
 }
 
-/*Preloader-image*/
-.loading-logo{
-  width: 10px;
-  height: 11px;
-  margin-top: 0px;
-  transform: scale(0.5px);
-  
+.text-center{
+  text-align: center;
+  font-size: clamp(0.4rem, 2.5vw, 0.7rem);
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Preloader---------------------------------------------------------------------------------------------- */
+/*Preloader container*/
+#preloader{
+  background: black;
+  /* margin: 20px 0; */
+  padding: 30dvh 10px 0 10px;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100dvh;
+  font-size: clamp(0.1rem, 2.5vw, 0.7rem);
+}
+
+#preloader-content{
+  background: black;
+  color: white;
+
+}
+
+#preloader-icon{
+  width: 39px;
+  height: 54px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#preloader-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*Preloader main text*/
+#preloader-fade{
+  /* font-size: clamp(0.6rem, 2.5vw, 1.0rem); */
+  text-align: center;
+}
+
+/*Preloader animated text*/
+#preload-text{
+  text-align: center;
+  margin: auto;
 }
 
 /*Preloader rotate animation*/
@@ -123,9 +154,11 @@ header{
 }
 
 /*Logo container selector*/
-.logo-container{
+.header-content{
   height: 54px;
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .logo-pic-container{
@@ -138,7 +171,7 @@ header{
   width: 100%;
   height: 100%;
   transform: scale(0.6);
-  
+
 }
 
 /*Logo text selector*/
@@ -153,35 +186,76 @@ header{
   margin-left: 0;
 }
 
-/*Logo text semi colon selector*/
-.logo-semi-colon{
-  /* color: var(--programming-orange); */
-}
-
 /*Logo text dash selector*/
 .logo-dash{
   padding: 0 3px 0 3px;
-  /* color: var(--programming-red); */
+}
+
+.dropdown-container{
+  margin: auto;
+  margin-top: 10px;
+  margin-right: 0;
+  width: 100px; 
+  align-self: flex-end;
+  /* left: 10px; */
+  /* border: 1px solid red; */
+}
+
+.button-container{
+  position: relative;
+}
+
+.button{
+  /* width: 100%; */
+  margin: auto;
+  display: block;
+  /* margin-left: auto; */
+  /* margin-right: 10px; */
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /* padding: 0 10px 0 0; */
+  /* border: 1px solid blue; */
+
 }
 
 
-/*selector for line with typing animation*/
-.typing{
-  animation-name: typing-animation;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+/*quick menu selector, disable it by default unless screen is compressed*/
+#menu-button{
+  font-size: 20px;
+  visibility: visible;
+  opacity: 1;
+  
 }
+
+
+/*The cross in quick menu*/
+#menu-cross{
+  display: none;
+  font-size: 22px;
+
+}
+
+#menu-line, #dropup-line{
+  transition: transform 0.5s linear;
+}
+
 
 #nav-content-container{
-  display: none;
-  visibility: hidden;
-  opacity: 0;
+  position: static;
+  margin-top: 3px;
+  display: inline-block;
+  /* visibility: hidden;
+  opacity: 0; */
   width: 100%;
   height: 0px;
-  z-index: 5;
+  z-index: 10;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, display 0.5s ease-in-out;
-  border: 1px solid white;
+  /* border: 0.5px solid white; */
+  /* border-top: 0px; */
   overflow: hidden;
+  /* background-color: red; */
 }
 
 .dropdown{
@@ -206,11 +280,13 @@ header{
 /*navbar list selector*/
 .list{
   /* background-color: #1a2e05; */
-  border: 1px solid white;
+  /* border: 0.5px solid rgba(255, 255, 255, 0.308); */
   width: 100%;
-  margin: 10px 0 10px 0;
+  margin: 5px 0 10px 0;
+  /* padding-left: 10px; */
   text-align: center;
-  cursor: pointer; 
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 
 
@@ -227,73 +303,132 @@ header{
 
 .active .highlight{
   display: inline;
+  color: var(--programming-blue);
 }
 
 /*navbar list "<>" selector when list is selected or highlighed*/
 .active .highlight, .navbar li a:hover .highlight{
-  color: var(--programming-blue);
+  /* color: var(--programming-blue); */
 }
 
 .dot-divider{
   display: none;
+  /* border: 1px solid white ; */
+  padding-top: 7px;
 }
 
-#menu-button, #menu-cross{
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  outline: none;
-  margin: auto;
-  margin-right: 10px;
-  cursor: pointer; 
-}
 
-/*quick menu selector, disable it by default unless screen is compressed*/
-#menu-button{
-  font-size: 20px;
-  visibility: visible;
-  opacity: 1;
-  transition: transform 0.5s linear;
-}
 
-/*The cross in quick menu*/
-#menu-cross{
-  display: none;
-  font-size: 25px;
-  transition: transform 500ms ease-in-out;
-}
-
-#menu-cross:hover{
+/* #menu-cross:click{
   transform: rotateX(180deg);
-}
-
+} */
 
 .content{
   padding-bottom: 2.5rem;
   /* padding-top: 65px; */
-  width: 100%
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  
 }
 
 .about-me{
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  position: relative;
+  /* z-index: 1; */
+  margin-bottom: 20px;
+}
+
+.about-me p{
+  /* font-size: clamp(0.3rem, 100%, 0.9rem); */
+  z-index: -10;
 }
 
 .about-me h1{
   width: 100%;
   text-align: center;
+  font-size: clamp(0.5em, 100%, 1.2rem);
+}
+
+#skillset-background{
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
 
 .profile-pic{
   width: clamp(300px, 100%, 400px);
-  height: 30%; 
+  height: 30%;
   margin: auto;
+  z-index: 5;
 }
 
 .profile-pic img{
   width: 100%;
   height: 100%;
-  margin: auto; 
+  margin: auto;
 }
+
+.profile-pic-text{
+  position: absolute;
+  font-size: 6.0rem;
+  right: 0;
+  left: 0;
+  top: 270px;
+  color:#16a34a;
+}
+
+.profile-pic-text h1, .profile-pic-text span{
+  color:rgba(255, 255, 255, 0.425);
+}
+
+.profile-description{
+  margin-bottom: 20px;
+}
+
+.portfolio h1{
+  width: 100%;
+  text-align: center;
+  font-size: clamp(0.5em, 100%, 1.2rem);
+  margin-bottom: 10px;
+}
+
+#porfolio-list-container{
+  /* border: 1px solid white; */
+  /* display: flex; */
+}
+
+.portfolio-list{
+  /* border: 1px solid white; */
+  margin-bottom: 10px;
+}
+
+.portfolio-logo{
+  width: 100%;
+  height: 100%;
+  
+}
+
+#chiyo-logo{
+  width: 41.2px;
+  height: 91.5px;
+  margin: auto;
+}
+
+#otherlife-logo{
+  width: 142.2px;
+  height: 45px;
+  margin: auto;
+}
+
+#contriver-logo{
+  width: 90px;
+  height: 110px;
+  margin: auto;
+}
+
+
 
 /*Footer*/
 .footer{
@@ -302,24 +437,41 @@ header{
   display: flex;
   bottom: 0;
   width: 100%;
-  padding: 25px 0 20px 0;
-  justify-content: center;
-  height: 2.5rem;
+  /* padding: 25px 0 20px 0; */
+  /* justify-content: center; */
+  /* height: 2.5rem; */
+}
+
+.footer-content{
+  display: flex;
 }
 
 /*Footer logo*/
 .footer-logo{
-  width: 15px;
-  height: 16px;
+  width: 14.6px;
+  height: 20.25px;
+  /* border: 1px solid white; */
+  margin: auto;
+  margin-right: 0;
+  display: inline;
+
+}
+
+.footer-logo img{
+  width: 100%;
+  height: 100%;
+  transform: scale(0.5px);
 }
 /*Footer text content*/
 .footer p{
-  padding: 2px 0 0 3px;
+  padding-left: 5px;
+  margin: auto;
+  margin-left: 0;
 }
 
 
 /* Hide the logo text in navbar when width is too small */
-@media screen and (max-width: 247px) {
+@media screen and (max-width: 320px) {
   .logo-text{
     display: none;
   }
@@ -350,7 +502,69 @@ header{
 @media screen and (min-width: 768px) {
   .container{
     max-width: 700px;
+    visibility: visible;
   }
+
+  .button-container{
+    display: none;
+  }
+
+  .dropdown-container{
+    display: block;
+    visibility: visible;
+    margin: auto;
+    margin-right: 0;
+    width: 300px;
+    height: 100%;
+    padding: 5px;
+  }
+
+  .dropdown-reverse, .dropdown{
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #nav-content-container{
+    display: flex;
+    flex-direction: row;
+    height: 100% !important;
+    width: 100%;
+    margin: auto;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+  }
+
+  .list{
+    width: 70px;
+    text-align: left;
+    margin: auto;
+    display: inline;
+    visibility: visible;
+    opacity: 1;
+    /* border: 1px solid white; */
+  }
+
+  .dot-divider{
+    display: inline;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    margin: auto;
+    opacity: 1;
+    height: 100%;
+  }
+
+  .header-content{
+    border-bottom: 1px solid grey;
+  }
+
+
 }
 
 /* Laptop*/
@@ -415,32 +629,29 @@ header{
   35%  {height: 50px;}
   45%  {height: 70px;}
   55%  {height: 90px;}
-  65%  {height: 110px;}
-  75%  {height: 120px;}
-  85%  {height: 140px;}
-  95%  {height: 145px;}
-  100% {height: 145px;}
+  65%  {height: 95px;}
+  100%  {height: 100%;}
+
 }
 
 /*Dropdown animation reverse*/
 @keyframes dropdown-reverse-animation {
-  0%   {height: 145px;}
-  15%  {height: 140px;}
-  25%  {height: 120px;}
-  35%  {height: 110px;}
-  45%  {height: 90px;}
+  0%  {height: 100%;}
+  15%  {height: 100%;}
+  25%  {height: 100%;}
+  35%  {height: 95px;}
+  45%  {height: 95px;}
   55%  {height: 70px;}
   65%  {height: 50px;}
   75%  {height: 30px;}
   85%  {height: 10px;}
-  95%  {height: 0px;}
   100% {height: 0px;}
 }
 
 /*Typing effect animation*/
 @keyframes key-typing {
   from {width:0}
-  to {width: 120%};
+  to {width: 100%};
 }
 
 @keyframes fadeIn {
