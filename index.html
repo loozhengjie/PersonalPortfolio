@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <!--Head Element-->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +14,15 @@
     <link href="css/styles.css" rel="stylesheet">
     <!--Icon for the page-->
     <link rel="icon" href="img/logo.ico">
-   </head>
+  </head>
 
+  <!--Body Element-->
   <body>
-
     <!--Preloader content-->
-    <div id="preloader">
+    <!--Preloader Parent, To make sure that the preloader page occupies the entire page-->
+    <section id="preloader">
+      <!--The Main Preloader content, it only occupies the center part of the preloader parent-->
       <div id="preloader-content" class="">
-
-       
-        
         <div id = "preloader-fade" class=" fade-in">
           <div id="preloader-icon" class="">
             <img class="rotate" src="img/logo.png" alt="portfolio logo"/>
@@ -53,7 +53,7 @@
         </div> 
 
       </div>
-    </div>
+    </section>
 
     
     <!--This is the the navbar, placed this on header-->
@@ -67,82 +67,135 @@
         <label class="logo-text"><span class="logo-semi-colon"><</span>Loo Zheng<span class="logo-dash">-</span>Jie<span class="logo-semi-colon">></span></label>
 
         <section class="dropdown-container">
-
           <div class="button-container">    
             <button id="menu-button" class="button">
               <span><</span>
               <i class="fa-solid fa-grip-lines" id="menu-line"></i>
               <span>></span>
             </button> 
-            
-
             <button id="menu-cross" class="button">
               <span><</span>
               <i class="fa fa-caret-down" id="dropup-line"></i>
               <span>></span>
             </button>
           </div>
-         
            <!--Main Navbar-->
           <nav id="nav-content-container" class="container">
             <ul class="navbar">
               <!--Navbar anchor-->
               <!-- <li class="list active"><a href="#home-page" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li> -->
-              <label class="dot-divider">.</label>
+              <label class="dot-divider"><div>.</div></label>
               <li class="list"><a href="#about-page"id="abt-btn" ><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
-              <label class="dot-divider">.</label>
+              <label class="dot-divider"><div>.</div></label>
               <!-- <li class="list"><a href="#skill-page" class="anchor" id="skill-btn"><span class="highlight"><</span>Skillsets<span class="highlight">></span></a></li>
-              <label class="dot-divider">.</label> -->
+              <label class="dot-divider"><div>.</div></label> -->
               <li class="list"><a href="#port-page" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
-              <label class="dot-divider">.</label>
+              <label class="dot-divider"><div>.</div></label>
               <li class="list"><a href="#contact-page" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
             </ul>
           </nav>
-
         </section>
-
       </section>
-
     </header>
 
-    
-   
-    
-    <section class="content container">
-
-      <section class = "about-me">
+    <!--The main contents on the website-->
+    <main>
+      <section class = "about-me content container">
         <div class="profile-pic">
           <img src="img/profile-pic.png" alt="profile-pic"/>
         </div>
         <div class="profile-pic-text">
-          <h1><span><</span>Hi!<span>></span><span class="typing">|</span></h1>
+          <!-- <h1><span><</span>Hi!<span>></span><span class="typing">|</span></h1> -->
         </div>
         
-        <section class ="profile-description text-center">
+        <section class ="profile-description">
           <p>
-            My name is <span>Loo Zheng-Jie</span>! I am an <span>aspiring programmer</span> currently <span>active</span> in the <span>game development</span> field.
-          </p>
-          <br>
-          <p>
+            <span><</span>Hi! My name is <span>Loo Zheng-Jie</span>!<span>></span><span class="typing hidden">|</span><br> I am an <span>aspiring programmer</span> currently <span>active</span> in the <span>game development</span> field.
             I believe that the <span>will to learn</span> and a good <span> problem solving</span> skills are the core foundations of a successful programmer.
-        </section>
-
-        <section id ="skillsets" class="text-center">
-          <div id="skillset-background"></div>
-          <p class="">
-            As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
-            majoring in game programming, I am well equipped with sufficient game development and programming skills.
-            <!-- Unity, Unreal Engine, C++, C#, HTML, CSS and vanilla Javascript. -->
           </p>
-          <br>
-          <p>
-            That includes proficiency of 
-            using game engines and programming languages ranging from: 
-            </p>
         </section>
+  
+      </section>
+
+      <section id ="skillsets" class="text-center content">
+  
+        <div id="skillset-background"></div>
+        <div id="skillset-para-container" class="container">
+          <h2><span>> </span>Skillsets<span class="typing">|</span></h2>
+          <section>
+            <ul id="skillset-list-container">
+              <li><p>C++</p></li>
+              <li><p>C#</p></li>
+              <li><p>Unreal Engine</p></li>
+              <li><p>Unity</p></li>
+              <li><p>HTML</p></li>
+              <li><p>CSS</p></li>
+              <li><p>Vanila Javascript</p></li>
+            </ul>
+          </section>
+          <div></div>
+        </div>
+       
       </section>
       
-
+  
+      <section id ="skillsets" class="text-center content hidden">
+  
+        <div id="skillset-background"></div>
+        <div id="skillset-para-container" class="container">
+          <h1><span><</span>Skillsets<span>></span><span class="typing">|</span></h1>
+          <!-- <p class="">
+            As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
+            majoring in game programming, I am well equipped with sufficient game development and programming skills.
+          </p> -->
+          <!-- <p>
+            That includes proficiency of 
+            using game engines and programming languages ranging from: 
+          </p> -->
+          <section>
+            <div id="skillsets-container">
+              <div>
+                <div class="logo-pic-container skillset cplus">
+                  <img class="logo-pic" src="img/C++Logo.svg" alt="C++ Logo"/>
+                </div>
+                <!-- <p>C++</p> -->
+              </div>
+              <div>
+                <div class="logo-pic-container skillset csharp">
+                  <img class="logo-pic" src="img/CSharpLogo.svg" alt="C# Logo"/>
+                </div>
+                <!-- <p>C#</p> -->
+              </div>
+              <div>
+                <div class="logo-pic-container skillset unreal">
+                  <img class="logo-pic" src="img/Unreal-Logo.png" alt="Unreal Logo"/>
+                </div>
+                <!-- <p>Unreal Engine</p> -->
+              </div>
+              <div>
+                <div class="logo-pic-container skillset unity">
+                  <img class="logo-pic" src="img/Unity-Logo-2.png" alt="Unity Logo"/>
+                </div>
+                <!-- <p>Unity</p> -->
+              </div>
+            </div>
+            <!-- <ul id="skillset-list-container">
+              <li><p>C++</p></li>
+              <li><p>C#</p></li>
+              <li><p>Unreal Engine</p></li>
+              <li><p>Unity</p></li>
+              <li><p>HTML</p></li>
+              <li><p>CSS</p></li>
+              <li><p>Vanila Javascript</p></li>
+            </ul> -->
+          </section>
+          <div></div>
+        </div>
+       
+      </section>
+  
+  
+  
       <!-- <section class = "portfolio">
         <h1>My portfolios: </h1>
         <div>
@@ -172,13 +225,12 @@
           </ul>
         </div>
       </section> -->
-
-
-    
-        
-
-
-    </section>
+  
+      <section id="footer-gap">
+   
+      </section>
+    </main>
+   
     
     <!--Footer-->
     <footer class="footer">
