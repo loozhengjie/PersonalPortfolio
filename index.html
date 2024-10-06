@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
   <!--Head Element-->
   <head>
+    <!--Use UTF-8 as the haracter encoding system-->
     <meta charset="UTF-8">
+    <!--Give browser instructions on how to render the page dimension or scaling-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Set the title of the webpage tab-->
     <title>LZJ | Portfolio</title>
     <!--Link the awesome font 5 kit-->
     <script src="https://kit.fontawesome.com/5b5b9210a8.js" crossorigin="anonymous"></script> 
-    <!--The font from google-->
+    <!--Link the font from google-->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
     <!--Link the styles.css-->
     <link href="css/styles.css" rel="stylesheet">
@@ -18,231 +21,73 @@
 
   <!--Body Element-->
   <body>
+
     <!--Preloader content-->
-    <!--Preloader Parent, To make sure that the preloader page occupies the entire page-->
-    <section id="preloader">
-      <!--The Main Preloader content, it only occupies the center part of the preloader parent-->
-      <div id="preloader-content" class="">
-        <div id = "preloader-fade" class=" fade-in">
-          <div id="preloader-icon" class="">
-            <img class="rotate" src="img/logo.png" alt="portfolio logo"/>
-          </div>
-          <label class="">
-            Welcome to my portfolio!
-            <br>©2024 by Loo Zheng-Jie
-            <br>Loading executable <span><"</span>potfolio.exe<span>"></span>..
-            <br>Encoding: ------  -------- --------
-            <br>01001100 01101111 01101111 00100000 
-            <br>01011010 01101000 01100101 01101110 
-            <br>01100111 00101101 01001010 01101001 
-            <br>01100101 00001010 -------- --------
-          </label>
-        </div>
-
-        <div id="preload-text" class="key-typing">
-          <p>
-            Initializing 
-            <span><</span>
-            "portfolio.exe"
-            <span>></span>
-            ....
-            <label class="typing">|</label>           
-            <!-- <img class="loading-logo rotate one" src="img/logo.png" alt="portfolio logo"/> -->
-          </p>
-         
-        </div> 
-
+    <div id="preloader" class="">
+      
+      <!--The rotating icon of the loader-->
+      <div id="preloader-icon">
+        <img src="img/logo.png" alt="portfolio logo"/>
       </div>
-    </section>
+
+      <!--The static loader text-->
+      <p class="preload-text">
+        Welcome to my portfolio!
+        <br>©2024 by Loo Zheng-Jie
+        <br>Loading executable &lt;"potfolio.exe" &gt;..
+        <br>Encoding: ------  -------- --------
+        <br>01001100 01101111 01101111 00100000 
+        <br>01011010 01101000 01100101 01101110 
+        <br>01100111 00101101 01001010 01101001 
+        <br>01100101 00001010 -------- --------
+      </p>
+
+      <!--The dynamic loader text with typing effect-->
+      <div class="key-typing preload-text">
+        <p>
+          Initializing &lt;"portfolio.exe"&gt;....
+          <label class="typing">|</label>           
+        </p>
+      </div> 
+
+    </div>
 
     
     <!--This is the the navbar, placed this on header-->
-    <header class="header container">
-      <!--Navbar logo and text "{Loo Zheng-Jie}"-->
-      <section class="header-content container">
+    <header>
 
-        <div class="logo-pic-container">
-          <img class="logo-pic" src="img/logo.png" alt="portfolio logo"/>
-        </div>
-        <label class="logo-text"><span class="logo-semi-colon"><</span>Loo Zheng<span class="logo-dash">-</span>Jie<span class="logo-semi-colon">></span></label>
+      <div class="flex">
+        <img class="logo-pic" src="img/logo.png" alt="portfolio logo"/>
+      
+        <p>
+          &lt;Loo Zheng-Jie&gt;
+        </p>
+      </div>
+      
 
-        <section class="dropdown-container">
-          <div class="button-container">    
-            <button id="menu-button" class="button">
-              <span><</span>
-              <i class="fa-solid fa-grip-lines" id="menu-line"></i>
-              <span>></span>
-            </button> 
-            <button id="menu-cross" class="button">
-              <span><</span>
-              <i class="fa fa-caret-down" id="dropup-line"></i>
-              <span>></span>
-            </button>
-          </div>
-           <!--Main Navbar-->
-          <nav id="nav-content-container" class="container">
-            <ul class="navbar">
-              <!--Navbar anchor-->
-              <!-- <li class="list active"><a href="#home-page" id="home-btn"><span class="highlight"><</span>Home<span class="highlight">></span></a></li> -->
-              <label class="dot-divider"><div>.</div></label>
-              <li class="list"><a href="#about-page"id="abt-btn" ><span class="highlight"><</span>About-Me<span class="highlight">></span></a></li>
-              <label class="dot-divider"><div>.</div></label>
-              <!-- <li class="list"><a href="#skill-page" class="anchor" id="skill-btn"><span class="highlight"><</span>Skillsets<span class="highlight">></span></a></li>
-              <label class="dot-divider"><div>.</div></label> -->
-              <li class="list"><a href="#port-page" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a></li>
-              <label class="dot-divider"><div>.</div></label>
-              <li class="list"><a href="#contact-page" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a></li>
-            </ul>
-          </nav>
-        </section>
-      </section>
+      <!--Main Navbar-->
+      <nav>
+        <ul>
+          <li>
+            <a href="#about-page"id="abt-btn" ><span class="highlight">&lt;</span>About-me<span class="highlight">&gt;</span></a>
+          </li>
+          <li>
+            <a href="#port-page" id="port-btn"><span class="highlight"><</span>Portfolio<span class="highlight">></span></a>
+          </li>
+          <li>
+            <a href="#contact-page" id="contact-btn"><span class="highlight"><</span>Contact<span class="highlight">></span></a>
+          </li>
+        </ul>
+      </nav>
+
     </header>
 
     <!--The main contents on the website-->
     <main>
-      <section class = "about-me content container">
-        <div class="profile-pic">
-          <img src="img/profile-pic.png" alt="profile-pic"/>
-        </div>
-        <div class="profile-pic-text">
-          <!-- <h1><span><</span>Hi!<span>></span><span class="typing">|</span></h1> -->
-        </div>
-        
-        <section class ="profile-description">
-          <p>
-            <span><</span>Hi! My name is <span>Loo Zheng-Jie</span>!<span>></span><span class="typing hidden">|</span><br> I am an <span>aspiring programmer</span> currently <span>active</span> in the <span>game development</span> field.
-            I believe that the <span>will to learn</span> and a good <span> problem solving</span> skills are the core foundations of a successful programmer.
-          </p>
-        </section>
-  
-      </section>
 
-      <section id ="skillsets" class="text-center container content">
-  
-        <div id="skillset-background"></div>
-        <div id="skillset-para-container" class="container">
-          <h2><span>> </span>Skillsets<span class="typing">|</span></h2>
-          <section>
-            <ul id="skillset-list-container">
-              <li><p>C++</p></li>
-              <li><p>C#</p></li>
-              <li><p>Unreal Engine</p></li>
-              <li><p>Unity</p></li>
-              <li><p>HTML</p></li>
-              <li><p>CSS</p></li>
-              <li><p>Vanila Javascript</p></li>
-            </ul>
-          </section>
-          <div></div>
-        </div>
-       
-      </section>
-      
-  
-      <!-- <section id ="" class="text-center content hidden">
-  
-        <div id="skillset-background"></div>
-        <div id="skillset-para-container" class="container">
-          <h1><span><</span>Skillsets<span>></span><span class="typing">|</span></h1>
-          <p class="">
-            As a graduate of Bachelor of Game Development (Honours) from University of Wollongong Malaysia (UOW), 
-            majoring in game programming, I am well equipped with sufficient game development and programming skills.
-          </p> 
-          <p>
-            That includes proficiency of 
-            using game engines and programming languages ranging from: 
-          </p>
-          <section>
-            <div id="skillsets-container">
-              <div>
-                <div class="logo-pic-container skillset cplus">
-                  <img class="logo-pic" src="img/C++Logo.svg" alt="C++ Logo"/>
-                </div>
-                <p>C++</p>
-              </div>
-              <div>
-                <div class="logo-pic-container skillset csharp">
-                  <img class="logo-pic" src="img/CSharpLogo.svg" alt="C# Logo"/>
-                </div>
-                <p>C#</p>
-              </div>
-              <div>
-                <div class="logo-pic-container skillset unreal">
-                  <img class="logo-pic" src="img/Unreal-Logo.png" alt="Unreal Logo"/>
-                </div>
-                <p>Unreal Engine</p>
-              </div>
-              <div>
-                <div class="logo-pic-container skillset unity">
-                  <img class="logo-pic" src="img/Unity-Logo-2.png" alt="Unity Logo"/>
-                </div>
-                <p>Unity</p>
-              </div>
-            </div>
-            <ul id="skillset-list-container">
-              <li><p>C++</p></li>
-              <li><p>C#</p></li>
-              <li><p>Unreal Engine</p></li>
-              <li><p>Unity</p></li>
-              <li><p>HTML</p></li>
-              <li><p>CSS</p></li>
-              <li><p>Vanila Javascript</p></li>
-            </ul>
-          </section>
-          <div></div>
-        </div>
-       
-      </section> -->
-  
-  
-  
-      <!-- <section class = "portfolio">
-        <h1>My portfolios: </h1>
-        <div>
-          <ul id="porfolio-list-container container" class="">
-            <li class ="portfolio-list">
-              <section id="chiyo-select" class="">
-                <div id="chiyo-logo" class="">
-                  <img src="img/ChiyoLogo.png" alt="Chiyo logo" class="portfolio-logo"/>
-                </div>
-              </section>
-            </li>
-            <li class ="portfolio-list">
-              <section id="otherlife-select">
-                <div id="otherlife-logo">
-                  <img src="img/OtherLifeLogo.png" alt="portfolio logo" class="portfolio-logo"/>
-                </div>
-              </section>
-             
-            </li>
-            <li class ="portfolio-list">
-              <section id="contriver-select">
-                <div id="contriver-logo">
-                  <img src="img/ContriverLogo.png" alt="portfolio logo" class="portfolio-logo"/>
-                </div>
-              </section>
-            </li>
-          </ul>
-        </div>
-      </section> -->
-  
-      <section id="footer-gap">
-   
-      </section>
     </main>
    
     
-    <!--Footer-->
-    <footer class="footer">
-      <div class="container footer-content">
-        <div class="footer-logo">
-          <img src="img/logo.png" alt="footer-loading-logo"/>
-        </div> 
-        <p>@ 2024 by Loo Zheng-Jie</p>
-      </div>
-      
-      
-    </footer>
 
     <!--Link JS-->
     <script src="js/script.js"></script>

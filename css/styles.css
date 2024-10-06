@@ -1,12 +1,9 @@
-/*Universal selector*/
+/* Base Selector--------------------------------------------------------------------------------------- */
+/*Universal Selector*/
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  color: white;
-  font-family: var(--programming-font);
 }
 
 /*Universal Focus Selector*/ 
@@ -28,16 +25,34 @@
   --programming-orange: orange;
 }
 
+/* Body and Anchor Selector */
+body, a{
+  color: white;
+}
+
 /*Body selector*/
 body{
   background-color: rgb(0, 0, 0);
   min-height: 100vh;
   position: relative;
   width: 100%;
-  /* border: 1px solid black; */
+  text-decoration: none;
+  font-family: var(--programming-font);
 }
 
-/*utility classes---------------------------------------------------------------------------------------- */
+img {
+  max-width: 100%;
+}
+
+/* List selector */
+ul{
+  list-style: none;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+
+/*utility classes------------------------------------------------------------------------------------------ */
 /*flexbox class*/
 .flex{
   display: flex;
@@ -97,7 +112,6 @@ body{
 /*Preloader container*/
 #preloader{
   background: black;
-  /* margin: 20px 0; */
   padding: 30dvh 10px 0 10px;
   position: fixed;
   z-index: 20;
@@ -107,17 +121,23 @@ body{
   top: 0;
 }
 
-#preloader-content{
-  background: black;
-  color: white;
-
+/*Preloader text*/
+.preload-text{
+  /* font-size: clamp(0.6rem, 2.5vw, 1.0rem); */
+  text-align: center;
+  margin: auto;
 }
+
 
 #preloader-icon{
   width: 39px;
   height: 54px;
   margin: auto;
   margin-bottom: 20px;
+
+  animation-name: rotate-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 #preloader-icon img {
@@ -125,643 +145,6 @@ body{
   height: 100%;
 }
 
-
-/*Preloader main text*/
-#preloader-fade{
-  /* font-size: clamp(0.6rem, 2.5vw, 1.0rem); */
-  text-align: center;
-}
-
-/*Preloader animated text*/
-#preload-text{
-  text-align: center;
-  margin: auto;
-}
-
-/*Preloader rotate animation*/
-.rotate{
-  animation-name: rotate-animation;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
 /* -------------------------------------------------------------------------------------------------------- */
 
-
-/*Header selector for navbar*/
-header{
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.658);
-  z-index: 5;
-  margin-bottom: 10px;
-}
-
-/*Logo container selector*/
-.header-content{
-  height: 54px;
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-.logo-pic-container{
-  width: 39px;
-  height: 54px;
-}
-
-/*Logo picture selector*/
-.logo-pic{
-  width: 100%;
-  height: 100%;
-  transform: scale(0.6);
-
-}
-
-/*Logo text selector*/
-.logo-text{
-  font-size: 1.2rem;
-  display: inline;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: inline;
-  /* padding: 22px 0 0 5px; */
-  margin: auto;
-  margin-left: 0;
-}
-
-/*Logo text dash selector*/
-.logo-dash{
-  padding: 0 3px 0 3px;
-}
-
-.dropdown-container{
-  margin: auto;
-  margin-top: 10px;
-  margin-right: 0;
-  width: 100px; 
-  align-self: flex-end;
-  /* left: 10px; */
-  /* border: 1px solid red; */
-}
-
-.button-container{
-  position: relative;
-}
-
-.button{
-  /* width: 100%; */
-  margin: auto;
-  display: block;
-  /* margin-left: auto; */
-  /* margin-right: 10px; */
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  /* padding: 0 10px 0 0; */
-  /* border: 1px solid blue; */
-
-}
-
-
-/*quick menu selector, disable it by default unless screen is compressed*/
-#menu-button{
-  font-size: 20px;
-  visibility: visible;
-  opacity: 1;
-  
-}
-
-
-/*The cross in quick menu*/
-#menu-cross{
-  display: none;
-  font-size: 22px;
-
-}
-
-#menu-line, #dropup-line{
-  transition: transform 0.5s linear;
-}
-
-
-#nav-content-container{
-  position: relative;
-  margin-top: 3px;
-  display: block;
-  /* visibility: hidden;
-  opacity: 0; */
-  width: 100%;
-  height: 0px;
-  z-index: 10;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, display 0.5s ease-in-out;
-  /* border: 0.5px solid white; */
-  /* border-top: 0px; */
-  overflow: hidden;
-  /* background-color: red; */
-}
-
-.dropdown{
-  animation-name: dropdown-animation;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.dropdown-reverse{
-  animation-name: dropdown-reverse-animation;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.navbar{
-  display: block;
-  width: 100%;
-}
-
-/*navbar list selector*/
-.list{
-  /* background-color: #1a2e05; */
-  /* border: 0.5px solid rgba(255, 255, 255, 0.308); */
-  width: 100%;
-  margin: 5px 0 10px 0;
-  /* padding-left: 10px; */
-  text-align: center;
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-/*navbar list "<>" selector when list is not selected by default*/
-.highlight{
-  display: none;
-}
-
-.active .highlight{
-  display: inline;
-  color: var(--programming-blue);
-}
-
-/*navbar list "<>" selector when list is selected or highlighed*/
-.active .highlight, .navbar li a:hover .highlight{
-  /* color: var(--programming-blue); */
-}
-
-.dot-divider{
-  display: none;
-  /* padding-top: 7px; */
-}
-
-/* #menu-cross:click{
-  transform: rotateX(180deg);
-} */
-
-.content{
-  /* padding-top: 65px; */
-  width: 100%;
-  /* position: relative; */
-  z-index: -1;
-  
-}
-
-.about-me{
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* z-index: 1; */
-  position: relative;
-  margin-bottom: 0;
-}
-
-.about-me h1{
-  width: 100%;
-  text-align: center;
-  font-size: clamp(0.5em, 100%, 1.2rem);
-}
-
-.profile-pic{
-  max-width: clamp(400px, 100%, 500px);
-  height: 30%;
-  margin: auto;
-  z-index: 5;
-}
-
-.profile-pic img{
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-.profile-pic-text{
-  position: absolute;
-  font-size: clamp(2.0rem, 25vw, 6.0rem);
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: clamp(50%, 25vw, 60%);
-  color:#16a34a;
-  display: block;
-  text-shadow: 0 0 0 rgba(0, 255, 106, 0.253);
-  text-transform: uppercase;
-}
-
-.profile-pic-text h1, .profile-pic-text span{
-  color:rgba(255, 255, 255, 0.425);
-}
-
-.profile-description{
-  font-size: clamp(0.6rem, 2.5vw, 0.9rem);
-  padding: 20px;
-  padding-bottom: 10px;
-}
-
-#footer-gap{
-  padding-bottom: 50px;
-}
-
-.portfolio h1{
-  width: 100%;
-  text-align: center;
-  font-size: clamp(0.5em, 100%, 1.8rem);
-}
-
-#skillsets{
-  position: relative;
-  padding-bottom: 50px;
-  /* height: 100px; */
-}
-
-#skillset-background{
-  background-size: cover;
-  background-color: rgb(0, 0, 0);
-  background-size: cover;
-  position: absolute;
-  z-index: -2;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  /* border-top: 1px solid white; */
-  /* max-width: 100dvw; */
-  
-}
-
-#skillsets-container{
-  display: grid;
-  grid-auto-flow: row;
-  grid-auto-columns: 0.2fr;
-  grid-gap: 10px;
-  place-content: center;
-  /* border: 1px solid red; */
-}
-
-#skillsets-container > div{
-  /* border: 1px solid white;  */
-  /* margin: auto; */
-  /* padding: 10px;*/
-}
-
-#skillsets-container > div div{
-  /* border: 1px solid blue; */
-  width: 100%;
-  height: 100%;
-}
-
-#skillsets-container > div div img{
-  /* border: 1px solid red; */
-  width: 100%;
-  height: 100%;
-}
-
-
-#skillsets p{
-  color: white;
-  font-size: clamp(0.5rem, 9vw, 0.9rem);
-  font-weight: bolder;
-}
-
-
-#skillset-para-container{
-  padding: 10px;
-  position: relative;
-  /* overflow: hidden; */
-}
-
-#skillset-para-container *{
-  text-align: left;
-  color: var(--programming-grey)
-}
-
-#skillset-para-container h1{
-  /* position: absolute; */
-  font-size: clamp(0.5rem, 9vw, 3.5rem);
-  /* border: 1px solid white; */
-  left: 0;
-  top:0;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 10px;
-}
-
-
-#skillset-para-container h1, #skillset-para-container h1 span{
-  text-transform: uppercase;
-  color: rgba(247, 247, 247, 0.603);
-}
-
-#skillset-list-container{
-  text-align: left;
-  margin: auto;
-  margin-left: 20px;
-  display: inline-block;  
-  max-width: 200px;
-  margin-top: 10px;
-}
-
-#skillset-list-container li{
-  list-style: circle;
-}
-
-#skillset-list-container li::marker{
-  color: white;
-}
-
-
-#porfolio-list-container{
-  /* border: 1px solid white; */
-  /* display: flex; */
-}
-
-.portfolio-list{
-  /* border: 1px solid white; */
-  margin-bottom: 10px;
-}
-
-.portfolio-logo{
-  width: 100%;
-  height: 100%;
-  
-}
-
-#chiyo-logo{
-  width: 41.2px;
-  height: 91.5px;
-  margin: auto;
-}
-
-#otherlife-logo{
-  width: 142.2px;
-  height: 45px;
-  margin: auto;
-}
-
-#contriver-logo{
-  width: 90px;
-  height: 110px;
-  margin: auto;
-}
-
-
-
-/*Footer*/
-.footer{
-  position: absolute;
-  font-size: 0.5rem;
-  display: flex;
-  bottom: 0;
-  width: 100%;
-  /* padding: 25px 0 20px 0; */
-  /* justify-content: center; */
-  /* height: 2.5rem; */
-}
-
-.footer-content{
-  display: flex;
-}
-
-/*Footer logo*/
-.footer-logo{
-  width: 14.6px;
-  height: 20.25px;
-  /* border: 1px solid white; */
-  margin: auto;
-  margin-right: 0;
-  display: inline;
-
-}
-
-.footer-logo img{
-  width: 100%;
-  height: 100%;
-  transform: scale(0.5px);
-}
-/*Footer text content*/
-.footer p{
-  padding-left: 5px;
-  margin: auto;
-  margin-left: 0;
-}
-
-
-/* Hide the logo text in navbar when width is too small */
-@media screen and (max-width: 375px) {
-  .logo-text{
-    display: none;
-  }
-
-  /* .logo-pic-container{
-    width: 31.2px;
-    height: 43.2px;
-  } */
-}
-
-/* Mobile S*/
-@media screen and (min-width: 320px) {
-  .container{
-    max-width: 300px;
-  }
-}
-
-/* Mobile M*/
-@media screen and (min-width: 375px) {
-  .container{
-    max-width: 375px;
-  }
-}
-
-/* Mobile L*/
-@media screen and (min-width: 425px) {
-  .container{
-    max-width: 425px;
-  }
-}
-
-/* Tablet */
-@media screen and (min-width: 768px) {
-  .container{
-    max-width: 700px;
-    visibility: visible;
-  }
-
-  .button-container{
-    display: none;
-  }
-
-  .dropdown-container{
-    display: block;
-    visibility: visible;
-    margin: auto;
-    margin-right: 0;
-    width: 350px;
-    height: 100%;
-    padding: 5px;
-  }
-
-
-  #nav-content-container{
-    display: flex;
-    flex-direction: row;
-    height: 100% !important;
-    width: 100%;
-    margin: auto;
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  .list{
-    width: 90px;
-    text-align: left;
-    margin: auto;
-    display: inline;
-    visibility: visible;
-    opacity: 1;
-    font-size: 1.2rem;
-  }
-
-  .dot-divider {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    width: 10%;
-    height: 100%;
-  }
-
-  .dot-divider div {
-    text-align: center;
-    height: 20px;
-    width: 40px;
-  }
-
-  .navbar{
-    display: flex;
-    flex-direction: row;
-    visibility: visible;
-    margin: auto;
-    opacity: 1;
-    height: 100%;
-  }
-
-  .header-content{
-    border-bottom: 0.5px solid grey;
-  }
-
-  #skillsets-container{
-    grid-auto-columns: 0.1fr;
-    grid-gap: 5px;
-  }
-}
-
-/* Laptop*/
-@media screen and (min-width: 1024px) {
-  .container{
-    max-width: 1024px;
-  }
-}
-
-/* Laptop L*/
-@media screen and (min-width: 1440px) {
-  .container{
-    max-width: 1440px;
-  }
-}
-
-
-
-/*Typing effect animation*/
-@keyframes typing-animation {
-  0% {
-    opacity: 1;
-  }
-  25% {
-      opacity: 0;
-  }
-  50% {
-      opacity: 1;
-  }
-  75% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-}
-}
-
-/*Logo loading rotation animation*/
-@keyframes rotate-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*Dropdown animation*/
-@keyframes dropdown-animation {
-  0%   {height: 0px;}
-  15%  {height: 10px;}
-  25%  {height: 30px;}
-  35%  {height: 50px;}
-  45%  {height: 70px;}
-  55%  {height: 90px;}
-  65%  {height: 95px;}
-  100%  {height: 100%;}
-
-}
-
-/*Dropdown animation reverse*/
-@keyframes dropdown-reverse-animation {
-  0%  {height: 100%;}
-  15%  {height: 100%;}
-  25%  {height: 100%;}
-  35%  {height: 95px;}
-  45%  {height: 95px;}
-  55%  {height: 70px;}
-  65%  {height: 50px;}
-  75%  {height: 30px;}
-  85%  {height: 10px;}
-  100% {height: 0px;}
-}
-
-/*Typing effect animation*/
-@keyframes key-typing {
-  from {width:0}
-  to {width: 100%};
-}
-
-@keyframes fadeIn {
-  99% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
 
