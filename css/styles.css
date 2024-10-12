@@ -17,7 +17,7 @@
 /*Root selector (variables)*/
 :root{
   font-size: 62.5%;
-  --programming-font:'Fira Code', monospace, Arial;
+  --programming-font: Consolas, 'Fira Code', monaco, monospace;
   --programming-blue: #60a5fa;
   --programming-grey: rgb(163, 160, 160);
   --programming-red: #ef4444;
@@ -27,7 +27,7 @@
 
 /* Body and Anchor Selector */
 body, a{
-  color: white;
+  color: var(--programming-grey);
 }
 
 /*Body selector*/
@@ -40,6 +40,7 @@ body{
   font-family: var(--programming-font);
 }
 
+/* Image Selector */
 img {
   max-width: 100%;
 }
@@ -62,6 +63,8 @@ ul{
 .hidden{
   opacity: 0;
   visibility: hidden;
+  width: 1px;
+  height: 1px;
 }
 
 /*border preview class*/
