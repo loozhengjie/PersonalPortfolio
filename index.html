@@ -21,78 +21,83 @@
 
   <!--Main body of the page, contents will be displayed here-->
   <body>
-    <!--Preloader content-->
-    <div id="preloader" class="">
-      <!--The rotating icon of the loader-->
-      <div id="preloader-icon">
-        <img src="img/logo.png" alt="portfolio logo"/>
-      </div>
-      <!--The static loader text-->
-      <p class="preload-text">
-        Welcome to my portfolio!
-        <br>©2024 by Loo Zheng-Jie
-        <br>Loading executable &lt;"potfolio.exe" &gt;..
-        <br>Encoding: ------  -------- --------
-        <br>01001100 01101111 01101111 00100000 
-        <br>01011010 01101000 01100101 01101110 
-        <br>01100111 00101101 01001010 01101001 
-        <br>01100101 00001010 -------- --------
-      </p>
-      <!--The dynamic loader text with typing effect-->
-      <div class="key-typing preload-text">
-        <p>
-          Initializing &lt;"portfolio.exe"&gt;....
-          <label class="typing">|</label>           
-        </p>
-      </div> 
-    </div>
-
     <!--Header of the page-->
-    <header>
+    <header class="flex">
       <!-- The logo for the header -->
-      <img width="30px" height="39px" class="logo-pic" src="img/logo-small.png" alt="portfolio logo"/>
+      <img width="116px" height="148px" id="main-logo" src="img/logo_crt.png" alt="portfolio logo"/>
       <!-- The text for the header -->
-      <p>Loo Zheng-Jie</p>
-      <!-- The navbar, located in the header -->
-      <nav>
-        <ul>
-          <li><a href="#me-sec"><span class="highlight">&lt;</span>About-Me<span class="highlight">&gt;</span></a></li>
-          <li><a href="#skill-sec"><span class="highlight">&lt;</span>Skillsets<span class="highlight">&gt;</span></a></li>
-          <li><a href="#project-sec"><span class="highlight">&lt;</span>Projects<span class="highlight">&gt;</span></a></li>
-        </ul>
-      </nav>
+      <img width="147px" height="27px" id="text-logo" src="img/logo_text_crt.png" alt="portfolio logo"/>
     </header>
+
+    <!-- The navbar -->
+    <nav class="nav container ">
+      <ul class= "nav-list">
+        <!-- Nav link for home -->
+        <li class="nav-item"><a href="#home-sec"><span class="highlight">[</span>Home<span class="highlight">]</span></a></li>
+        <!-- Nav link for about me -->
+        <li class="nav-item"><a href="#me-sec"><span class="highlight hidden">[</span>About-Me<span class="highlight hidden">]</span></a></li>
+         <!-- Nav link for skillsets -->
+        <li class="nav-item"><a href="#skill-sec"><span class="highlight hidden">[</span>Skillsets<span class="highlight hidden">]</span></a></li>
+         <!-- Nav link for projects -->
+        <li class="nav-item"><a href="#project-sec"><span class="highlight hidden">[</span>Projects<span class="highlight hidden">]</span></a></li>
+      </ul>
+      <p>========================================================================</p>
+    </nav>
 
     <!--The main contents on the website-->
     <main>
       <!-- Hero Section of the webpage -->
-      <section>
+      <section class="hero container">
         <h1>Hi, I am Zheng-Jie!</h1>
-        <p>Passionate programmer.</p>
+        <h2>A passionate programmer_</h2>
+        <p>I believe that the will to learn and a good problem solving skills are the core foundations of a successful programmer.</p>
+        <div class="CTA-buttons">
+          <ul>
+            <li>&gt; <a>Github</a></li>
+            <li>&gt; <a>LinkedIn</a></li>
+            <li>&gt; <a>Resume</a></li>
+          </ul>
+        </div>
       </section>
 
       <!-- About-me section of the webpage -->
-      <section>
-        <h2>About-me</h2>
-        <p>I am a gameplay programmer with experience working on Unity, Unreal, and Stencyl. I am able to code in different coding languages such as C# and C++. 
-           Having worked on multiple team-based projects, 
-           I am a team player that is willing to listen and actively communicate in a team.</p>
+      <section class="about-me container">
+        <img class ="about-me-profile-pic" width="153.28px" height="198.54px" src="img/profile_pic_crt.png" alt="profile picture CRT edition">
+        <div class="about-me-description">
+          <h2>About-me</h2>
+          <p></p>==========================</p>
+          <p>Currently working as: </p> 
+          <p>> Gameplay programmer @ Nimbus Games</p>
+          <br/>
+          <p>Education:</p>
+          <p>
+            > University of Wollongong Malaysia (UOW Malaysia) - Bachelor of Game Development (Honours) [2020-2023]
+          </p>
+          <br/>
+          <p>
+            > University of Wollongong Malaysia (UOW Malaysia) - Foundation Studies (Art and Technology) [2019-2020]
+          </p>
+        </div>
+       
       </section>
 
       <!-- Skillset Section of the webpage -->
-      <section>
+      <section class="skillsets container">
         <h2>Skillsets</h2>
-        <ul>
+        <ul class="skillsets-list">
           <li>C++</li>
-          <li>Unreal Engine</li>
-          <li>Unity</li>
+          <li>C#</li>
           <li>HTML</li>
           <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Figma</li>
+          <li>Unreal Engine</li>
+          <li>Unity</li>
         </ul>
       </section>
 
       <!-- Projects Section of the webpage -->
-      <section>
+      <section class="projects container hidden">
         <h2>Projects</h2>
         <ul>
           <li>Chiyo</li>
@@ -102,20 +107,8 @@
         </ul>
       </section>
 
-       <!-- Seperate Section for projects -->
-      <article class ="hidden">
-        <h2>Other Life</h2>
-        <p>
-          Other Life is a first-person exploring with emphasis on immersive environment and challenging puzzles. 
-          The game is developed in Unreal Engine 4 (UE4). 
-          The game tells the adventure of an alien explorer, sent out to scour the stars in search of new life.  
-          After detecting a significant energy signature on a nearby planet, you and your trusty AI companion happen upon the remnants of an alien civilization, brought to ruin by an unknown catastrophe. 
-          Armed with unique light-based technology, explore and discover the truth behind this interstellar mystery.Other Life is a first-person exploring with emphasis on immersive environment and challenging puzzles. 
-        </p>
-      </article>
-
       <!--Footer-->
-      <footer class="footer">
+      <footer class="footer hidden">
         <div class="container footer-content">
           <img width="30px" height="39px" src="img/logo.png" alt="footer-loading-logo"/>
           <p>@ 2024 by Loo Zheng-Jie</p>

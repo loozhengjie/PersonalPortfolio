@@ -1,12 +1,12 @@
-/* Base Selector--------------------------------------------------------------------------------------- */
-/*Universal Selector*/
+/* Base Selector */
+/* Universal Selector */
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/*Universal Focus Selector*/ 
+/* Universal Focus Selector */ 
 *:focus {
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -14,20 +14,16 @@
   touch-action: manipulation;
 }
 
-/*Root selector (variables)*/
+/* Root selector (variables) */
 :root{
-  font-size: 62.5%;
-  --programming-font: Consolas, 'Fira Code', monaco, monospace;
-  --programming-blue: #60a5fa;
-  --programming-grey: rgb(163, 160, 160);
-  --programming-red: #ef4444;
-  --programming-green: #16a34a;
-  --programming-orange: orange;
+  /* font-size: 62.5%; */
+  --programming-font: 'Fira Code', Consolas, monaco, monospace;
+  --programming-green: #46FC46;
 }
 
 /* Body and Anchor Selector */
 body, a{
-  color: var(--programming-grey);
+  color: var(--programming-green);
 }
 
 /*Body selector*/
@@ -50,29 +46,25 @@ ul{
   list-style: none;
 }
 
-/* -------------------------------------------------------------------------------------------------------- */
+/* ---------- */
 
-
-/*utility classes------------------------------------------------------------------------------------------ */
-/*flexbox class*/
+/* utility classes */
+/* Flex box class */
 .flex{
   display: flex;
 }
 
-/*Hidden class*/
+/* Hidden class */
 .hidden{
-  opacity: 0;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
+  display: none;
 }
 
-/*border preview class*/
+/* border preview class */
 .border{
   border: 1px solid white;
 }
 
-/*container class*/
+/* container class */
 .container{
   width: 100%;
   margin-left: auto;
@@ -80,10 +72,9 @@ ul{
   margin-bottom: 10px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  /* border: 1px solid white; */
 }
 
-/*selector for line with typing animation*/
+/* selector for line with typing animation */
 .typing{
   animation-name: typing-animation;
   animation-duration: 2s;
@@ -109,45 +100,186 @@ ul{
   text-align: center;
 }
 
-/* ------------------------------------------------------------------------------------------------------- */
+/* ---------- */
 
-/* Preloader---------------------------------------------------------------------------------------------- */
-/*Preloader container*/
-#preloader{
-  background: black;
-  padding: 30dvh 10px 0 10px;
-  position: fixed;
-  z-index: 20;
-  width: 100%;
-  height: 100dvh;
-  font-size: clamp(0.1rem, 2.5vw, 0.7rem);
-  top: 0;
+/* Header */
+header{
+  flex-direction: column;
+  align-items: center;
 }
 
-/*Preloader text*/
-.preload-text{
-  /* font-size: clamp(0.6rem, 2.5vw, 1.0rem); */
+#main-logo {
+  margin-top: 56px;
+}
+
+#text-logo {
+  margin-top: 5px;
+}
+/* ---------- */
+
+/* Nav bar */
+.nav{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.nav p{
+  display: inline-block;
   text-align: center;
-  margin: auto;
-}
-
-
-#preloader-icon{
-  width: 39px;
-  height: 54px;
-  margin: auto;
+  letter-spacing: 0.05px;
+  font-size: 7px;
   margin-bottom: 20px;
-
-  animation-name: rotate-animation;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
 }
 
-#preloader-icon img {
-  width: 100%;
-  height: 100%;
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin: 10px 0px 0px 0px;
+
 }
 
-/* -------------------------------------------------------------------------------------------------------- */
+.nav-item {
+  margin: 0px 10px; 
+}
 
+.nav-item a {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* About-me */
+.hero{
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.hero > *{
+  padding: 0px 30px;
+  font-weight: normal;
+}
+
+.hero h1{
+  font-size: 26px;
+}
+
+.hero h2{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.hero p{
+  font-size: 10px;
+}
+
+.hero .CTA-buttons ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.hero .CTA-buttons ul li{
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.about-me{
+  display: flex;
+  font-size: 10px;
+  margin: auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.about-me h2{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.about-me-profile-pic{
+  border: 1px solid var(--programming-green);
+  margin-left: 20px;
+}
+
+
+
+.skillsets{
+  text-align: center;
+}
+
+.skillsets h2{
+  font-size: 16px;
+  font-weight: normal;
+  border: 1px solid var(--programming-green);
+  margin: 0px 30px;
+}
+
+.skillsets-list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px; 
+  margin: 10px 30px 20px 30px;
+}
+
+.skillsets-list li{
+  background: #A1FEA1; /* or any background */
+  color: #1D4B1D;
+  text-align: center;
+}
+
+/* Hide the logo text in navbar when width is too small */
+@media screen and (max-width: 375px) {
+  .logo-text{
+    display: none;
+  }
+}
+
+/* Mobile S*/
+@media screen and (min-width: 320px) {
+  .container{
+    max-width: 300px;
+  }
+}
+
+/* Mobile M*/
+@media screen and (min-width: 375px) {
+  .container{
+    max-width: 375px;
+  }
+}
+
+/* Mobile L*/
+@media screen and (min-width: 425px) {
+  .container{
+    max-width: 425px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .container{
+    max-width: 700px;
+  }
+
+}
+
+/* Laptop*/
+@media screen and (min-width: 1024px) {
+  .container{
+    max-width: 1024px;
+  }
+}
+
+/* Laptop L*/
+@media screen and (min-width: 1440px) {
+  .container{
+    max-width: 1440px;
+  }
+}
 
